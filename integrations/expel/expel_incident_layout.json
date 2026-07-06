@@ -41,12 +41,20 @@
             "i": "summary-actions-section-refresh",
             "items": [
               {
+                "args": {
+                  "force": {
+                    "simple": "true"
+                  }
+                },
+                "buttonClass": "primary",
                 "endCol": 2,
-                "fieldId": "incident_expelsyncrequested",
-                "height": 22,
-                "id": "96f4ab53-b260-4e80-bdfd-5b0d39f7fd2e",
+                "fieldId": "",
+                "height": 44,
+                "id": "expel-refresh-current-investigation-button",
                 "index": 0,
-                "sectionItemType": "field",
+                "name": "Refresh from Expel",
+                "scriptId": "ExpelSyncCurrentIncident",
+                "sectionItemType": "button",
                 "startCol": 0
               }
             ],

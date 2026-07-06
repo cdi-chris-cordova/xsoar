@@ -39,7 +39,6 @@ Expel Remediation Checklist,longText,expel_remediation_checklist,Checklist-style
 Remediation Count,shortText,expel_remediation_count,Total remediation actions synced from Expel
 Open Remediation Count,shortText,expel_open_remediation_count,Number of open remediation actions synced from Expel
 Closed Remediation Count,shortText,expel_closed_remediation_count,Number of completed remediation actions synced from Expel
-Refresh Expel Investigation,boolean,expel_sync_requested,Toggle to run the on-demand Expel sync automation from the incident layout; the automation resets this field after it runs
 PagerDuty Incident ID,shortText,pagerduty_incident_id,Linked PagerDuty incident ID
 PagerDuty Dedup Key,shortText,pagerduty_dedup_key,PagerDuty dedup key used to correlate the Expel investigation
 PagerDuty Incident URL,url,pagerduty_incident_url,Direct link to the linked PagerDuty incident

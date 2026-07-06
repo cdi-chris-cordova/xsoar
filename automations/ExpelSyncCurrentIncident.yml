@@ -3,7 +3,7 @@ args:
   name: investigation_id
 - auto: PREDEFINED
   defaultValue: 'false'
-  description: Force a refresh even if the layout trigger control is not currently set.
+  description: Optional compatibility flag. The automation always attempts a sync when invoked.
   name: force
   predefined:
   - 'true'
@@ -38,7 +38,6 @@ script: |-
   from CommonServerPython import *  # noqa: F401
   from CommonServerUserPython import *  # noqa: F401
 
-  TRIGGER_FIELD = "expelsyncrequested"
   INVESTIGATION_FIELD = "expelinvestigationid"
   SYNC_PAYLOAD_COMMAND = "expel-get-incident-sync-data"
 
@@ -103,20 +102,7 @@ script: |-
       return skipped_fields
 
 
-  def _reset_trigger_field() -> None:
-      try:
-          _execute_command("setIncident", {TRIGGER_FIELD: False})
-      except DemistoException as exc:
-          demisto.debug(f'Failed to reset Expel sync trigger field "{TRIGGER_FIELD}": {exc}')
-
-
-  def sync_current_incident_command(args: Dict[str, Any]) -> Optional[CommandResults]:
-      force = argToBoolean(args.get("force", "false"))
-      trigger_requested = argToBoolean(_get_incident_value(TRIGGER_FIELD) or "false")
-      if not force and not trigger_requested:
-          demisto.debug("Expel on-demand sync skipped because the refresh control is not enabled.")
-          return None
-
+  def sync_current_incident_command(args: Dict[str, Any]) -> CommandResults:
       investigation_id = (
           args.get("investigation_id")
           or args.get("investigationID")
@@ -132,7 +118,6 @@ script: |-
 
       payload = _extract_payload(_execute_command(SYNC_PAYLOAD_COMMAND, command_args))
       skipped_fields = _set_current_incident_fields(payload)
-      _reset_trigger_field()
 
       output = {
           "Updated": True,
@@ -172,8 +157,6 @@ script: |-
   def main() -> None:
       try:
           result = sync_current_incident_command(demisto.args())
-          if result is None:
-              return
           return_results(result)
       except Exception as exc:
           demisto.error(traceback.format_exc())

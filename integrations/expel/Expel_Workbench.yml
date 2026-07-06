@@ -1,0 +1,2730 @@
+commonfields:
+  id: Expel Workbench
+  version: -1
+vcShouldKeepItemLegacyProdMachine: false
+name: Expel Workbench
+display: Expel Workbench
+category: Case Management
+isfetch: true
+isremotesyncin: true
+isremotesyncout: false
+ismappable: true
+image: data:image/jpeg;base64,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
+description: Integration with the Expel Workbench Public API. Fetches investigation records where `is_incident=true`.
+detaileddescription: |-
+  ### Community Contributed Integration
+   #### Integration Author: Chris Cordova
+   No support or maintenance is provided by the author. Customers are encouraged to engage with the user community for questions and guidance at the [Cortex XSOAR Live Discussions](https://live.paloaltonetworks.com/t5/cortex-xsoar-discussions/bd-p/Cortex_XSOAR_Discussions).
+  ***
+  ## Expel Workbench integration
+configuration:
+- display: ""
+  displaypassword: API Key
+  name: apikey
+  type: 9
+  required: true
+  hiddenusername: true
+- section: Connect
+  display: Server URL (e.g., https://workbench.expel.io/api/v2/)
+  name: url
+  defaultvalue: https://workbench.expel.io/api/v2/
+  type: 0
+  required: true
+- display: Trust any certificate (not secure)
+  name: insecure
+  defaultvalue: "false"
+  type: 8
+  required: false
+- display: Use system proxy settings
+  name: proxy
+  defaultvalue: "false"
+  type: 8
+  required: false
+- display: Fetch incidents
+  name: isFetch
+  defaultvalue: "false"
+  type: 8
+  required: false
+- display: First fetch time
+  name: first_fetch
+  defaultvalue: 7 days
+  type: 0
+  required: false
+- display: Max fetch
+  name: max_fetch
+  defaultvalue: "50"
+  type: 0
+  required: false
+- display: Incident type
+  name: incident_type
+  defaultvalue: Expel Investigation
+  type: 0
+  required: false
+- display: Fetch time field
+  name: fetch_time_field
+  defaultvalue: updated_at
+  type: 0
+  required: false
+script:
+  type: python
+  script: |
+    import json
+    import re
+    import traceback
+    from datetime import datetime, timedelta, timezone
+    from typing import Any, Dict, Optional, List, Set, Tuple
+    from urllib.parse import quote, urlparse
+    
+    import requests
+    
+    
+    """Disable Secure Warning"""
+    
+    
+    #Creating the client class to handle all API interactions.
+    """Client Class"""
+    
+    class Client(BaseClient):
+        """
+        Client for Expel Workbench API.
+        """
+    
+        def __init__(self, api_key: str, base_url: str, verify: bool, proxy: bool):
+            super().__init__(base_url=base_url, verify=verify, proxy=proxy)
+    
+            self.api_key = api_key
+    
+            if self.api_key:
+                self._headers = {'Authorization': f'Bearer {api_key}', 'Content-Type': 'application/json'}
+    
+        def get_investigations(self, params: Optional[Dict[str, Any]] = None):
+            """
+            Fetches a list of expel investigations.
+            """
+            return self._http_request(
+                method='GET',
+                url_suffix='investigations',
+                headers=self._headers,
+                params=params,
+            )
+    
+        def get_investigation_details(self, id, relation=None, params: Optional[Dict[str, Any]] = None):
+            """
+            Fetches details about the specified investigation.
+            """
+            self.id = id
+            investigation_id = _safe_path_segment(id, "id")
+    
+            if relation:
+                self.relation = relation
+                relation_segment = _safe_path_segment(relation, "relation")
+    
+                return self._http_request(
+                    method='GET',
+                    url_suffix=f'investigations/{investigation_id}/{relation_segment}',
+                    params=params,
+                )
+    
+            else:
+    
+                return self._http_request(method='GET', url_suffix=f'investigations/{investigation_id}', params=params)
+    
+        def get_alerts(self, params: Optional[Dict[str, Any]] = None):
+            """
+            Fetches a list of expel alerts.
+            """
+            return self._http_request(method='GET', url_suffix='expel_alerts', params=params)
+    
+        def get_alert_details(self, id, relation=None, params: Optional[Dict[str, Any]] = None):
+            """
+            Fetches the details of the specified alert.
+            """
+            self.id = id
+            alert_id = _safe_path_segment(id, "id")
+    
+            if relation:
+                self.relation = relation
+                relation_segment = _safe_path_segment(relation, "relation")
+    
+                return self._http_request(
+                    method='GET',
+                    url_suffix=f'expel_alerts/{alert_id}/{relation_segment}',
+                    params=params,
+                )
+    
+            else:
+    
+                return self._http_request(method='GET', url_suffix=f'expel_alerts/{alert_id}', params=params)
+    
+        def post_context_upload(self, data):
+            """
+            Uploads context to our Expel workbench instance in the form of JSON Objects
+            """
+            body = {
+                "data": data
+            }
+    
+            return self._http_request(method='POST', url_suffix='context_variables/actions/upload/single', json_data=body)
+    
+        def patch_context_update(self, context_id: str, data: Dict[str, Any]):
+            """
+            Updates a context variable, its categories, and related context label tags.
+            """
+            context_id_segment = _safe_path_segment(context_id, "context_id")
+            body = {"data": data}
+            return self._http_request(
+                method="PATCH",
+                url_suffix=f"context_variables/actions/update/{context_id_segment}",
+                json_data=body,
+            )
+    
+        def delete_context_variable(self, context_id: str):
+            """
+            Deletes a context variable and associated labels (if allowed by API).
+            """
+            context_id_segment = _safe_path_segment(context_id, "context_id")
+            return self._http_request(
+                method="DELETE",
+                url_suffix=f"context_variables/actions/delete/{context_id_segment}",
+            )
+    
+        def get_alert_count_by_severity(self, params: Optional[Dict[str, Any]] = None):
+            """
+            Fetches alert counts by severity.
+            """
+            return self._http_request(
+                method="GET",
+                url_suffix="expel_alerts/alert_count_by_severity",
+                params=params,
+            )
+    
+        def get_investigation_history_timeline(self, investigation_id: str):
+            """
+            Fetches investigation history timeline entries.
+            """
+            investigation_id_segment = _safe_path_segment(investigation_id, "investigation_id")
+            return self._http_request(
+                method="GET",
+                url_suffix=f"investigations/{investigation_id_segment}/history_timeline",
+            )
+    
+        def get_alert_history_timeline(self, alert_id: str):
+            """
+            Fetches expel alert history timeline entries.
+            """
+            alert_id_segment = _safe_path_segment(alert_id, "alert_id")
+            return self._http_request(
+                method="GET",
+                url_suffix=f"expel_alerts/{alert_id_segment}/history_timeline",
+            )
+    
+        def get_remediation_actions(self, investigation_id: str, params: Optional[Dict[str, Any]] = None):
+            """
+            Fetches remediation actions related to an investigation.
+            """
+            investigation_id_segment = _safe_path_segment(investigation_id, "investigation_id")
+            return self._http_request(
+                method="GET",
+                url_suffix=f"investigations/{investigation_id_segment}/remediation_actions",
+                headers=self._headers,
+                params=params,
+            )
+    
+        def search_events(self, params: Dict[str, Any]):
+            """
+            Performs an event search.
+            """
+            return self._http_request(
+                method="GET",
+                url_suffix="events/search",
+                params=params,
+            )
+    
+        def get_health(self, auth: bool = False, heartbeat: bool = False, params: Optional[Dict[str, Any]] = None):
+            """
+            Gets Workbench API health status.
+            """
+            if heartbeat:
+                url_suffix = "health/heartbeat"
+            elif auth:
+                url_suffix = "auth_health"
+            else:
+                url_suffix = "health"
+    
+            return self._http_request(
+                method="GET",
+                url_suffix=url_suffix,
+                params=params,
+            )
+    
+        def get_info(self):
+            """
+            Gets Workbench API info.
+            """
+            return self._http_request(
+                method="GET",
+                url_suffix="info",
+            )
+    
+        def get_incident_investigations(
+            self,
+            since: str,
+            limit: int = 50,
+            offset: int = 0,
+            time_field: str = "created_at",
+        ):
+            """
+            Fetch investigations that are incidents (is_incident=true) updated/created since a given timestamp.
+            """
+            filters = {
+                time_field: f"\u2265{since}",
+                "is_incident": "true",
+            }
+            # Leave scope unfiltered here; combining open and closed scopes can
+            # collapse into an empty result set depending on Expel's scope handling.
+            args = {
+                "limit": limit,
+                "offset": offset,
+                "sort": f"{time_field},id",
+                "filter": filters,
+            }
+            params = _build_list_params(args)
+    
+            demisto.debug(f"fetch-incidents params: {params}")
+    
+            return self._http_request(
+                method="GET",
+                url_suffix="investigations",
+                headers=self._headers,
+                params=params,
+            )
+    
+    
+    """Testing Functions"""
+    
+    def test_module(client: Client) -> str:
+        """
+        Tests connectivity to the Expel Workbench API.
+        """
+        try:
+            client.get_investigations()
+            return 'ok'
+        except Exception as e:
+            return f'Test failed. Error: {_sanitize_error_text(e, secret_values=[client.api_key])}'
+    
+    
+    
+    """Command Functions"""
+    #These functions are used to interact with the API response data.
+    
+    SEVERITY_MAP = {
+        "CRITICAL": 4,
+        "HIGH": 3,
+        "MEDIUM": 2,
+        "LOW": 1,
+        "INFO": 0,
+    }
+    
+    ALLOWED_INVESTIGATION_RELATIONS: Set[str] = {
+        "analyst_activity_timeline",
+        "assigned_to_actor",
+        "close_comment_updated_by",
+        "comment_histories",
+        "comments",
+        "context_label_action_histories",
+        "context_label_actions",
+        "context_labels",
+        "created_by",
+        "destination_ip_addresses",
+        "emerging_threat_scan_result",
+        "escalated_expel_alerts",
+        "evidence",
+        "expel_alert_histories",
+        "expel_alerts",
+        "files",
+        "findings",
+        "hunt_technique",
+        "investigation_finding_histories",
+        "investigation_histories",
+        "investigation_resilience_actions",
+        "investigative_action_histories",
+        "investigative_actions",
+        "ip_addresses",
+        "last_published_by",
+        "lead_description_updated_by",
+        "lead_expel_alert",
+        "lookback_result",
+        "most_recent_investigative_action",
+        "organization",
+        "organization_resilience_action_hints",
+        "organization_resilience_actions",
+        "related_investigations_via_involved_host_ips",
+        "remediation_action_asset_histories",
+        "remediation_action_assets",
+        "remediation_action_histories",
+        "remediation_actions",
+        "review_requested_by",
+        "source_ip_addresses",
+        "status_last_up",
+        "status_last_updated_by",
+    }
+    
+    ALLOWED_ALERT_RELATIONS: Set[str] = {
+        "analyst_activity_timeline",
+        "vendor",
+        "investigation",
+        "organization",
+        "assigned_to_actor",
+        "similar_alerts",
+        "status_last_updated_by",
+        "hunting_investigation",
+        "hunting_investigation_finding",
+        "created_by",
+        "updated_by",
+        "close_comment_updated_by",
+        "context_labels",
+        "evidence",
+        "expel_alert_histories",
+        "expel_alert_view_histories",
+        "expel_alert_assignable_expel_user_view_histories",
+        "expel_alert_rapid_triage_priority_histories",
+        "suppression_histories",
+        "source_ip_addresses",
+        "destination_ip_addresses",
+        "suggestions",
+        "vendor_alerts",
+        "related_investigations",
+        "investigative_actions",
+        "investigative_action_histories",
+        "related_investigations_via_involved_host_ips",
+        "originated_context_labels",
+        "phishing_submissions",
+        "user_tasks",
+    }
+    
+    MAX_FETCH_INCIDENTS = 200
+    MAX_TRACKED_FETCH_IDS = 10000
+    MAX_REMEDIATION_ACTIONS = 100
+    MAX_REMEDIATION_TEXT_LENGTH = 1000
+    MAX_REMEDIATION_FIELD_LENGTH = 15000
+    MAX_REMEDIATION_CHECKLIST_LENGTH = 15000
+    DEFAULT_PAGERDUTY_SEARCH_DAYS = 365
+    DEFAULT_PAGERDUTY_SEARCH_LIMIT = 200
+    DEFAULT_MIRROR_TIME_FIELD = "updated_at"
+    MIRRORABLE_TIME_FIELDS: Tuple[str, ...] = (
+        "updated_at",
+        "status_updated_at",
+        "is_incident_status_updated_at",
+    )
+    PAGERDUTY_FETCH_STATUSES = "triggered,acknowledged,resolved"
+    PAGERDUTY_LINK_FIELD_MAP = {
+        "pagerdutyincidentid": "pagerdutyincidentid",
+        "pagerdutydedupkey": "pagerdutydedupkey",
+        "pagerdutyincidenturl": "pagerdutyincidenturl",
+        "pagerdutystatus": "pagerdutystatus",
+        "pagerdutyservicename": "pagerdutyservicename",
+    }
+    REMEDIATION_CLOSED_STATUSES = {
+        "closed",
+        "complete",
+        "completed",
+        "done",
+        "fixed",
+        "mitigated",
+        "resolved",
+    }
+    BEARER_TOKEN_RE = re.compile(r"(?i)bearer\s+[a-z0-9\-._~+/]+=*")
+    
+    def _to_xsoar_severity(expel_analyst_severity: str) -> int:
+        if not expel_analyst_severity:
+            return 0
+        return SEVERITY_MAP.get(expel_analyst_severity.upper(), 0)
+    
+    
+    def _normalize_single_value(value: Any, arg_name: str, allow_empty: bool = False) -> Optional[str]:
+        if isinstance(value, list):
+            if len(value) != 1:
+                raise DemistoException(f'{arg_name} must contain exactly one value.')
+            value = value[0]
+        if value is None:
+            return None if allow_empty else ""
+        value_str = str(value).strip()
+        if not value_str and not allow_empty:
+            raise DemistoException(f'{arg_name} cannot be empty.')
+        return value_str or None
+    
+    
+    def _validate_allowed_value(value: Any, arg_name: str, allowed_values: Set[str]) -> Optional[str]:
+        value_str = _normalize_single_value(value, arg_name, allow_empty=True)
+        if not value_str:
+            return None
+        if value_str not in allowed_values:
+            raise DemistoException(
+                f'{arg_name} must be one of the supported values: {", ".join(sorted(allowed_values))}.'
+            )
+        return value_str
+    
+    
+    def _truncate_text(value: Any, limit: int) -> Optional[str]:
+        if value is None:
+            return None
+        value_str = str(value)
+        if len(value_str) <= limit:
+            return value_str
+        return f"{value_str[:limit]}..."
+    
+    
+    def _sanitize_error_text(value: Any, secret_values: Optional[List[str]] = None) -> str:
+        text = str(value)
+        text = BEARER_TOKEN_RE.sub("Bearer [REDACTED]", text)
+        for secret in secret_values or []:
+            if secret:
+                text = text.replace(secret, "[REDACTED]")
+        return text
+    
+    
+    def _validate_base_url(base_url: Any) -> str:
+        url = _normalize_single_value(base_url, "url")
+        if not url:
+            raise DemistoException("url cannot be empty.")
+        parsed = urlparse(url)
+        if parsed.scheme != "https":
+            raise DemistoException("url must use https.")
+        if not parsed.netloc:
+            raise DemistoException("url must include a valid host.")
+        if parsed.username or parsed.password:
+            raise DemistoException("url must not contain embedded credentials.")
+        if parsed.query or parsed.fragment:
+            raise DemistoException("url must not contain query strings or fragments.")
+        return url.rstrip("/") + "/"
+    
+    def _parse_json_arg(value: Any, arg_name: str) -> Dict[str, Any]:
+        if value is None or value == "":
+            return {}
+        if isinstance(value, dict):
+            return value
+        try:
+            return json.loads(value)
+        except Exception as exc:
+            raise DemistoException(f'Failed parsing "{arg_name}" as JSON: {exc}') from exc
+    
+    
+    def _parse_iso8601(value: str, arg_name: str) -> datetime:
+        if not value:
+            raise DemistoException(f'{arg_name} cannot be empty.')
+        try:
+            normalized = value.replace("Z", "+00:00")
+            return datetime.fromisoformat(normalized)
+        except Exception as exc:
+            raise DemistoException(f'{arg_name} must be ISO 8601 (e.g., 2024-01-01T00:00:00Z).') from exc
+    
+    
+    def _parse_first_fetch(first_fetch: str) -> str:
+        try:
+            return parse_date_range(first_fetch)[0]
+        except Exception as exc:
+            raise DemistoException(f"Could not parse first_fetch value: {first_fetch}") from exc
+    
+    
+    def _to_datetime(value: Any, arg_name: str) -> datetime:
+        if isinstance(value, datetime):
+            return value if value.tzinfo else value.replace(tzinfo=timezone.utc)
+        if isinstance(value, str):
+            dt = _parse_iso8601(value, arg_name)
+            return dt if dt.tzinfo else dt.replace(tzinfo=timezone.utc)
+        raise DemistoException(f"{arg_name} must be a datetime or ISO 8601 string.")
+    
+    
+    def _to_iso8601_utc(dt: datetime) -> str:
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        dt = dt.astimezone(timezone.utc)
+        return dt.isoformat(timespec="seconds").replace("+00:00", "Z")
+    
+    
+    def _safe_path_segment(value: Any, arg_name: str) -> str:
+        if value is None:
+            raise DemistoException(f'{arg_name} cannot be empty.')
+        value_str = str(value).strip()
+        if not value_str:
+            raise DemistoException(f'{arg_name} cannot be empty.')
+        return quote(value_str, safe="")
+    
+    
+    def _serialize_remediation_actions(remediation_actions: List[Dict[str, Any]], truncated: bool) -> str:
+        payload = {
+            "count": len(remediation_actions),
+            "truncated": truncated,
+            "actions": remediation_actions,
+        }
+        serialized = json.dumps(payload, default=str, indent=2)
+        if len(serialized) <= MAX_REMEDIATION_FIELD_LENGTH:
+            return serialized
+    
+        reduced_payload = dict(payload)
+        reduced_payload["actions"] = [
+            {
+                "id": action.get("id"),
+                "action": action.get("action"),
+                "action_type": action.get("action_type"),
+                "status": action.get("status"),
+                "updated_at": action.get("updated_at"),
+            }
+            for action in remediation_actions
+        ]
+        return json.dumps(reduced_payload, default=str, indent=2)
+    
+    
+    def _normalize_status_token(value: Any) -> str:
+        if value is None:
+            return ""
+        normalized = re.sub(r"[^a-z0-9]+", "_", str(value).strip().lower())
+        return normalized.strip("_")
+    
+    
+    def _is_closed_remediation(action: Dict[str, Any]) -> bool:
+        normalized_status = _normalize_status_token(action.get("status"))
+        if not normalized_status:
+            return False
+        return normalized_status in REMEDIATION_CLOSED_STATUSES or normalized_status.startswith("closed_")
+    
+    
+    def _build_remediation_summary(remediation_actions: List[Dict[str, Any]], truncated: bool) -> Dict[str, Any]:
+        open_count = 0
+        closed_count = 0
+        checklist_lines: List[str] = []
+    
+        for action in remediation_actions:
+            is_closed = _is_closed_remediation(action)
+            if is_closed:
+                closed_count += 1
+            else:
+                open_count += 1
+    
+            marker = "x" if is_closed else " "
+            title = (
+                action.get("action")
+                or action.get("template_name")
+                or action.get("action_type")
+                or f"Remediation {action.get('id') or ''}".strip()
+            )
+            details = [
+                f"Status: {action.get('status') or 'unknown'}",
+                f"ID: {action.get('id') or 'unknown'}",
+            ]
+            if action.get("action_type"):
+                details.append(f"Type: {action.get('action_type')}")
+            if action.get("asset_count") not in (None, ""):
+                details.append(f"Assets: {action.get('asset_count')}")
+            if action.get("updated_at"):
+                details.append(f"Updated: {action.get('updated_at')}")
+            checklist_lines.append(f"[{marker}] {title} | {' | '.join(details)}")
+    
+        summary_lines = [
+            f"Total remediations: {len(remediation_actions)}",
+            f"Open remediations: {open_count}",
+            f"Completed remediations: {closed_count}",
+        ]
+        if checklist_lines:
+            summary_lines.append("")
+            summary_lines.extend(checklist_lines)
+        if truncated:
+            summary_lines.extend(("", "Additional remediation actions were truncated."))
+    
+        checklist = "\n".join(summary_lines)
+        if len(checklist) > MAX_REMEDIATION_CHECKLIST_LENGTH:
+            checklist = _truncate_text(checklist, MAX_REMEDIATION_CHECKLIST_LENGTH) or ""
+    
+        return {
+            "checklist": checklist,
+            "total_count": len(remediation_actions),
+            "open_count": open_count,
+            "closed_count": closed_count,
+            "has_open_remediations": open_count > 0,
+        }
+    
+    
+    def _fetch_remediation_actions(client: Client, investigation_id: str) -> Tuple[List[Dict[str, Any]], bool]:
+        """
+        Fetch all remediation actions for an investigation.
+        """
+        remediation_actions: List[Dict[str, Any]] = []
+        page_size = 50
+        offset = 0
+        truncated = False
+    
+        try:
+            while True:
+                response = client.get_remediation_actions(
+                    investigation_id=investigation_id,
+                    params={
+                        "page[limit]": page_size,
+                        "page[offset]": offset,
+                        "sort": "created_at,id",
+                    },
+                )
+                data = response.get("data") or []
+                if isinstance(data, dict):
+                    data = [data]
+                page_items = [item for item in data if isinstance(item, dict)]
+    
+                for item in page_items:
+                    attrs = item.get("attributes") or {}
+                    relationships = item.get("relationships") or {}
+                    assets_relation = relationships.get("remediation_action_assets") or {}
+                    asset_data = assets_relation.get("data") or []
+                    if isinstance(asset_data, dict):
+                        asset_count = 1
+                    elif isinstance(asset_data, list):
+                        asset_count = len(asset_data)
+                    else:
+                        asset_count = 0
+    
+                    remediation_actions.append({
+                        "id": item.get("id"),
+                        "type": item.get("type"),
+                        "action": _truncate_text(attrs.get("action"), MAX_REMEDIATION_TEXT_LENGTH),
+                        "action_type": _truncate_text(attrs.get("action_type"), MAX_REMEDIATION_TEXT_LENGTH),
+                        "status": _truncate_text(attrs.get("status"), MAX_REMEDIATION_TEXT_LENGTH),
+                        "status_updated_at": attrs.get("status_updated_at"),
+                        "created_at": attrs.get("created_at"),
+                        "updated_at": attrs.get("updated_at"),
+                        "close_reason": _truncate_text(attrs.get("close_reason"), MAX_REMEDIATION_TEXT_LENGTH),
+                        "comment": _truncate_text(attrs.get("comment"), MAX_REMEDIATION_TEXT_LENGTH),
+                        "template_name": _truncate_text(attrs.get("template_name"), MAX_REMEDIATION_TEXT_LENGTH),
+                        "version": _truncate_text(attrs.get("version"), MAX_REMEDIATION_TEXT_LENGTH),
+                        "asset_count": asset_count,
+                    })
+                    if len(remediation_actions) >= MAX_REMEDIATION_ACTIONS:
+                        truncated = True
+                        break
+    
+                if truncated or len(page_items) < page_size:
+                    break
+                offset += page_size
+        except Exception as exc:
+            demisto.debug(
+                f"Failed to fetch remediation actions for investigation {investigation_id}: "
+                f"{_sanitize_error_text(exc, secret_values=[client.api_key])}"
+            )
+    
+        return remediation_actions, truncated
+    
+    
+    def _utc_days_ago_iso(days: int) -> str:
+        return _to_iso8601_utc(datetime.now(timezone.utc) - timedelta(days=days))
+    
+    
+    def _normalize_id_list(value: Any) -> List[str]:
+        if not value:
+            return []
+        if isinstance(value, str):
+            try:
+                parsed = json.loads(value)
+            except Exception:
+                return [value]
+            if isinstance(parsed, list):
+                return [str(item) for item in parsed if item not in (None, "")]
+            return [str(parsed)]
+        if isinstance(value, (list, tuple, set)):
+            return [str(item) for item in value if item not in (None, "")]
+        return [str(value)]
+    
+    
+    def _append_tracked_id(tracked_ids: List[str], tracked_ids_set: Set[str], value: Optional[str], limit: int) -> None:
+        if not value or value in tracked_ids_set:
+            return
+        tracked_ids.append(value)
+        tracked_ids_set.add(value)
+        while len(tracked_ids) > limit:
+            removed_id = tracked_ids.pop(0)
+            tracked_ids_set.discard(removed_id)
+    
+    
+    def _get_mirror_time_field(configured_time_field: str) -> str:
+        if configured_time_field in MIRRORABLE_TIME_FIELDS:
+            return configured_time_field
+        return DEFAULT_MIRROR_TIME_FIELD
+    
+    
+    def _get_investigation_modified_time_value(item: Dict[str, Any], time_field: str) -> str:
+        attrs = item.get("attributes") or {}
+        return (
+            attrs.get(time_field)
+            or attrs.get("updated_at")
+            or attrs.get("status_updated_at")
+            or attrs.get("created_at")
+            or _to_iso8601_utc(datetime.now(timezone.utc))
+        )
+    
+    
+    def _build_get_modified_remote_data_response(modified_incident_ids: List[str], last_update: str) -> Any:
+        response_cls = globals().get("GetModifiedRemoteDataResponse")
+        if callable(response_cls):
+            for kwargs in (
+                {"modified_incident_ids": modified_incident_ids, "last_update": last_update},
+                {"modified_incident_ids": modified_incident_ids},
+            ):
+                try:
+                    return response_cls(**kwargs)
+                except TypeError:
+                    continue
+        return {
+            "modified_incident_ids": modified_incident_ids,
+            "last_update": last_update,
+        }
+    
+    
+    def _build_get_remote_data_response(
+        mirrored_object: Dict[str, Any],
+        last_update: str,
+        remote_data: Dict[str, Any],
+        entries: Optional[List[Dict[str, Any]]] = None,
+    ) -> Any:
+        response_cls = globals().get("GetRemoteDataResponse")
+        entries = entries or []
+        if callable(response_cls):
+            for kwargs in (
+                {
+                    "mirrored_object": mirrored_object,
+                    "last_update": last_update,
+                    "remote_data": remote_data,
+                    "entries": entries,
+                },
+                {
+                    "mirrored_object": mirrored_object,
+                    "remote_data": remote_data,
+                    "entries": entries,
+                },
+                {
+                    "mirrored_object": mirrored_object,
+                    "last_update": last_update,
+                    "entries": entries,
+                },
+                {
+                    "mirrored_object": mirrored_object,
+                    "entries": entries,
+                },
+            ):
+                try:
+                    return response_cls(**kwargs)
+                except TypeError:
+                    continue
+        return {
+            "mirrored_object": mirrored_object,
+            "last_update": last_update,
+            "remote_data": remote_data,
+            "entries": entries,
+        }
+    
+    
+    def _build_xsoar_incident_from_investigation(
+        client: Client,
+        item: Dict[str, Any],
+        incident_type: str,
+        time_field: str,
+    ) -> Dict[str, Any]:
+        attrs = item.get("attributes") or {}
+        incident_id = item.get("id")
+        incident_id_str = str(incident_id) if incident_id is not None else ""
+        workbench_url = f"https://workbench.expel.io/investigations/{incident_id_str}" if incident_id_str else None
+        rel = item.get("relationships") or {}
+        org_id = (rel.get("organization") or {}).get("data") or {}
+        assigned_actor_id = (rel.get("assigned_to_actor") or {}).get("data") or {}
+        created_by_id = (rel.get("created_by") or {}).get("data") or {}
+        updated_by_id = (rel.get("updated_by") or {}).get("data") or {}
+        lead_desc_updated_by_id = (rel.get("lead_description_updated_by") or {}).get("data") or {}
+    
+        created_at = attrs.get("created_at") or ""
+        title = attrs.get("title") or f"Expel Investigation {item.get('id')}"
+        analyst_sev = attrs.get("analyst_severity") or ""
+        time_value = _get_investigation_modified_time_value(item, time_field)
+        details = (
+            attrs.get("lead_description")
+            or attrs.get("open_summary")
+            or attrs.get("close_comment")
+            or title
+        )
+        occurred = _to_iso8601_utc(_to_datetime(created_at or time_value, time_field))
+        remediation_actions, remediation_truncated = (
+            _fetch_remediation_actions(client, incident_id_str) if incident_id_str else ([], False)
+        )
+        remediation_summary = _build_remediation_summary(remediation_actions, remediation_truncated)
+        if remediation_actions:
+            details = (
+                f"{details}\n\nRemediation actions synced: {len(remediation_actions)}"
+                f"{'+' if remediation_truncated else ''}"
+                f" (open: {remediation_summary['open_count']}, completed: {remediation_summary['closed_count']})"
+            )
+    
+        custom_fields = {
+            "expelinvestigationid": incident_id,
+            "expelshortlink": attrs.get("short_link"),
+            "expelworkbenchurl": workbench_url,
+            "expelcreatedat": attrs.get("created_at"),
+            "expelupdatedat": attrs.get("updated_at"),
+            "expelstatusupdatedat": attrs.get("status_updated_at"),
+            "expelisincidentstatusupdatedat": attrs.get("is_incident_status_updated_at"),
+            "expeldeletedat": attrs.get("deleted_at"),
+            "expelanalystseverity": attrs.get("analyst_severity"),
+            "expelthreattype": attrs.get("threat_type"),
+            "expelattackvector": attrs.get("attack_vector"),
+            "expeldetectiontype": attrs.get("detection_type"),
+            "expelattacktiming": attrs.get("attack_timing"),
+            "expelattacklifecycle": attrs.get("attack_lifecycle"),
+            "expelmalwarefamilycf": attrs.get("malware_family"),
+            "expelinitialattackvector": attrs.get("initial_attack_vector"),
+            "expelleaddescription": attrs.get("lead_description"),
+            "expeldecision": attrs.get("decision"),
+            "expelclosecomment": attrs.get("close_comment"),
+            "expelcriticalcomment": attrs.get("critical_comment"),
+            "expelopensummary": attrs.get("open_summary"),
+            "expelopenreason": attrs.get("open_reason"),
+            "expelnextstepscf": attrs.get("next_steps"),
+            "expelsourcereason": attrs.get("source_reason"),
+            "expeldefaultpluginslug": attrs.get("default_plugin_slug"),
+            "expelorgid": org_id.get("id"),
+            "expelassignedactorid": assigned_actor_id.get("id"),
+            "expelcreatedbyactorid": created_by_id.get("id"),
+            "expelupdatedbyactorid": updated_by_id.get("id"),
+            "expelleaddescupdatedbyactorid": lead_desc_updated_by_id.get("id"),
+            "expelremediationactions": _serialize_remediation_actions(
+                remediation_actions,
+                remediation_truncated,
+            ),
+            "expelremediationchecklist": remediation_summary["checklist"],
+            "expelremediationcount": str(remediation_summary["total_count"]),
+            "expelopenremediationcount": str(remediation_summary["open_count"]),
+            "expelclosedremediationcount": str(remediation_summary["closed_count"]),
+        }
+    
+        clean_custom_fields = {
+            k: v if isinstance(v, str) else str(v)
+            for k, v in custom_fields.items()
+            if v is not None
+        }
+    
+        raw_item = dict(item)
+        if workbench_url:
+            raw_item["workbench_url"] = workbench_url
+        raw_item["remediation_actions"] = {
+            "count": len(remediation_actions),
+            "truncated": remediation_truncated,
+            "actions": remediation_actions,
+            "summary": {
+                "total_count": remediation_summary["total_count"],
+                "open_count": remediation_summary["open_count"],
+                "closed_count": remediation_summary["closed_count"],
+                "has_open_remediations": remediation_summary["has_open_remediations"],
+            },
+        }
+    
+        return {
+            "name": title,
+            "details": details,
+            "occurred": occurred,
+            "type": incident_type,
+            "severity": _to_xsoar_severity(analyst_sev),
+            "dbotMirrorId": incident_id_str or None,
+            "CustomFields": clean_custom_fields,
+            "rawJSON": json.dumps(raw_item, default=str),
+        }
+    
+    
+    def _build_set_incident_args_from_mirrored_object(mirrored_object: Dict[str, Any]) -> Dict[str, Any]:
+        set_incident_args: Dict[str, Any] = {
+            "name": mirrored_object.get("name"),
+            "details": mirrored_object.get("details"),
+            "severity": mirrored_object.get("severity"),
+        }
+        for field_name, field_value in (mirrored_object.get("CustomFields") or {}).items():
+            set_incident_args[field_name] = field_value
+        return set_incident_args
+    
+    
+    def _build_incident_sync_payload(mirrored_object: Dict[str, Any]) -> Dict[str, Any]:
+        custom_fields = mirrored_object.get("CustomFields") or {}
+        payload = {
+            "InvestigationID": str(custom_fields.get("expelinvestigationid") or mirrored_object.get("dbotMirrorId") or ""),
+            "name": mirrored_object.get("name"),
+            "details": mirrored_object.get("details"),
+            "severity": mirrored_object.get("severity"),
+            "occurred": mirrored_object.get("occurred"),
+            "dbotMirrorId": mirrored_object.get("dbotMirrorId"),
+            "custom_fields": custom_fields,
+        }
+        return {key: value for key, value in payload.items() if value not in (None, "", [], {})}
+    
+    
+    def _get_platform_command_executor():
+        executor = getattr(demisto, "executeCommand", None)
+        if callable(executor):
+            return executor
+        return None
+    
+    
+    def _platform_commands_supported() -> bool:
+        return _get_platform_command_executor() is not None
+    
+    
+    def _set_current_incident_fields(set_incident_args: Dict[str, Any]) -> List[str]:
+        skipped_fields: List[str] = []
+        system_args = {
+            field_name: field_value
+            for field_name, field_value in set_incident_args.items()
+            if field_name in {"name", "details", "severity"}
+        }
+        custom_field_args = {
+            field_name: field_value
+            for field_name, field_value in set_incident_args.items()
+            if field_name not in system_args
+        }
+    
+        if system_args:
+            _execute_platform_command("setIncident", system_args)
+    
+        for field_name, field_value in custom_field_args.items():
+            try:
+                _execute_platform_command("setIncident", {field_name: field_value})
+            except DemistoException as exc:
+                skipped_fields.append(field_name)
+                demisto.debug(
+                    f'Skipping incident field "{field_name}" during sync: '
+                    f'{_sanitize_error_text(exc, secret_values=[str(field_value)])}'
+                )
+    
+        return skipped_fields
+    
+    
+    def _sync_current_incident_from_investigation(
+        client: Client,
+        item: Dict[str, Any],
+        incident_type: str,
+        time_field: str,
+    ) -> List[str]:
+        mirrored_object = _build_xsoar_incident_from_investigation(
+            client=client,
+            item=item,
+            incident_type=incident_type,
+            time_field=time_field,
+        )
+        return _set_current_incident_fields(_build_set_incident_args_from_mirrored_object(mirrored_object))
+    
+    
+    def get_modified_remote_data_command(client: Client, last_update: str, first_fetch: str, fetch_time_field: str) -> Any:
+        mirror_time_field = _get_mirror_time_field(fetch_time_field)
+        since = last_update or _parse_first_fetch(first_fetch)
+        try:
+            since_dt = _to_datetime(since, "last_update")
+        except Exception:
+            since = _parse_first_fetch(first_fetch)
+            since_dt = _to_datetime(since, "last_update")
+        since_str = _to_iso8601_utc(since_dt)
+    
+        fetched_ids_set = set(_normalize_id_list(demisto.getLastRun().get("fetched_ids")))
+        modified_ids: List[str] = []
+        modified_ids_set: Set[str] = set()
+        offset = 0
+        page_size = 50
+        newest_dt = since_dt
+    
+        while True:
+            response = client.get_incident_investigations(
+                since=since_str,
+                limit=page_size,
+                offset=offset,
+                time_field=mirror_time_field,
+            )
+            data = response.get("data") or []
+            if not data:
+                break
+    
+            for item in data:
+                incident_id = item.get("id")
+                incident_id_str = str(incident_id) if incident_id is not None else ""
+                if not incident_id_str:
+                    continue
+    
+                modified_dt = _to_datetime(
+                    _get_investigation_modified_time_value(item, mirror_time_field),
+                    mirror_time_field,
+                )
+                if modified_dt > newest_dt:
+                    newest_dt = modified_dt
+    
+                if fetched_ids_set and incident_id_str not in fetched_ids_set:
+                    continue
+                if incident_id_str not in modified_ids_set:
+                    modified_ids.append(incident_id_str)
+                    modified_ids_set.add(incident_id_str)
+    
+            if len(data) < page_size:
+                break
+            offset += page_size
+    
+        return _build_get_modified_remote_data_response(
+            modified_incident_ids=modified_ids,
+            last_update=_to_iso8601_utc(newest_dt),
+        )
+    
+    
+    def get_remote_data_command(client: Client, remote_id: str, incident_type: str, fetch_time_field: str) -> Any:
+        if not remote_id:
+            raise DemistoException("the remote incident id cannot be empty.")
+    
+        response = client.get_investigation_details(remote_id)
+        item = response.get("data") or {}
+        if not isinstance(item, dict) or not item:
+            raise DemistoException(f"Expel investigation {remote_id} was not found.")
+    
+        mirror_time_field = _get_mirror_time_field(fetch_time_field)
+        mirrored_object = _build_xsoar_incident_from_investigation(
+            client=client,
+            item=item,
+            incident_type=incident_type,
+            time_field=mirror_time_field,
+        )
+        remote_data = json.loads(mirrored_object["rawJSON"])
+        last_update = _to_iso8601_utc(
+            _to_datetime(_get_investigation_modified_time_value(item, mirror_time_field), mirror_time_field)
+        )
+        return _build_get_remote_data_response(
+            mirrored_object=mirrored_object,
+            last_update=last_update,
+            remote_data=remote_data,
+            entries=[],
+        )
+    
+    
+    def _get_current_incident_value(field_name: str) -> Optional[str]:
+        incident = demisto.incident() or {}
+        custom_fields = incident.get("CustomFields") or incident.get("customFields") or {}
+        value = custom_fields.get(field_name)
+        if value in (None, ""):
+            value = incident.get(field_name)
+        if value in (None, ""):
+            return None
+        return str(value)
+    
+    
+    def _execute_platform_command(command: str, args: Dict[str, Any]) -> List[Dict[str, Any]]:
+        sanitized_args = {k: v for k, v in args.items() if v not in (None, "", [], {})}
+        executor = _get_platform_command_executor()
+        if executor is None:
+            raise DemistoException(
+                "Platform command execution is unavailable in the current integration runtime. "
+                "This XSOAR server cannot run setIncident from an integration command."
+            )
+        try:
+            result = executor(command, sanitized_args)
+        except Exception as exc:
+            raise DemistoException(
+                f'{command} raised an exception: '
+                f'{_sanitize_error_text(exc, secret_values=[str(v) for v in sanitized_args.values()])}'
+            ) from exc
+        if isError(result):
+            raise DemistoException(
+                f'{command} failed: {_sanitize_error_text(get_error(result), secret_values=[str(v) for v in sanitized_args.values()])}'
+            )
+        if isinstance(result, list):
+            return result
+        if isinstance(result, dict):
+            return [result]
+        raise DemistoException(f"{command} returned an unsupported response type.")
+    
+    
+    def _extract_first_entry_contents(command_results: List[Dict[str, Any]]) -> Any:
+        for entry in command_results:
+            if entry.get("Type") == entryTypes.get("error"):
+                continue
+            if "Contents" in entry:
+                return entry.get("Contents")
+        return None
+    
+    
+    def _extract_pagerduty_incident_from_results(command_results: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
+        contents = _extract_first_entry_contents(command_results)
+        if isinstance(contents, list):
+            for item in contents:
+                if isinstance(item, dict):
+                    return item
+        if isinstance(contents, dict):
+            incident = contents.get("incident")
+            if isinstance(incident, dict):
+                return incident
+        return None
+    
+    
+    def _extract_pagerduty_incidents_from_results(command_results: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        contents = _extract_first_entry_contents(command_results)
+        if isinstance(contents, list):
+            return [item for item in contents if isinstance(item, dict)]
+        if isinstance(contents, dict):
+            if isinstance(contents.get("incidents"), list):
+                return [item for item in contents.get("incidents", []) if isinstance(item, dict)]
+            incident = contents.get("incident")
+            if isinstance(incident, dict):
+                return [incident]
+        return []
+    
+    
+    def _get_pagerduty_incident_by_id(incident_id: str) -> Dict[str, Any]:
+        results = _execute_platform_command("PagerDuty-get-incident-data", {"incident_id": incident_id})
+        incident = _extract_pagerduty_incident_from_results(results)
+        if not incident:
+            raise DemistoException(f"PagerDuty incident {incident_id} was not found.")
+        return incident
+    
+    
+    def _get_pagerduty_incident_by_key(incident_key: str) -> Optional[Dict[str, Any]]:
+        results = _execute_platform_command(
+            "PagerDuty-incidents",
+            {
+                "incident_key": incident_key,
+                "status": PAGERDUTY_FETCH_STATUSES,
+                "limit": 1,
+            },
+        )
+        return _extract_pagerduty_incident_from_results(results)
+    
+    
+    def _get_expel_pagerduty_search_terms() -> List[str]:
+        search_terms: List[str] = []
+        for value in (
+            _get_current_incident_value("expelinvestigationid"),
+            _get_current_incident_value("expelshortlink"),
+            _get_current_incident_value("dbotMirrorId"),
+        ):
+            if not value:
+                continue
+            normalized_value = str(value).strip()
+            if normalized_value and normalized_value not in search_terms:
+                search_terms.append(normalized_value)
+        return search_terms
+    
+    
+    def _stringify_pagerduty_details(details: Any) -> str:
+        if isinstance(details, str):
+            return details
+        if details in (None, "", [], {}):
+            return ""
+        try:
+            return json.dumps(details, default=str)
+        except Exception:
+            return str(details)
+    
+    
+    def _score_pagerduty_incident_match(incident: Dict[str, Any], search_terms: List[str]) -> Tuple[int, str]:
+        incident_key = str(incident.get("incident_key") or "")
+        summary = str(incident.get("summary") or "")
+        details = _stringify_pagerduty_details(
+            (((incident.get("first_trigger_log_entry") or {}).get("channel") or {}).get("details"))
+        )
+        combined_text = " ".join(part for part in (summary, details) if part).lower()
+    
+        best_score = 0
+        best_reason = ""
+        for term in search_terms:
+            term_lc = term.lower()
+            if incident_key and incident_key.lower() == term_lc:
+                return 100, f'incident_key matched "{term}"'
+            if summary and term_lc in summary.lower():
+                score = 90
+                reason = f'summary contained "{term}"'
+            elif details and term_lc in details.lower():
+                score = 80
+                reason = f'details contained "{term}"'
+            elif combined_text and term_lc in combined_text:
+                score = 70
+                reason = f'pagerduty incident contained "{term}"'
+            else:
+                continue
+    
+            if score > best_score:
+                best_score = score
+                best_reason = reason
+    
+        return best_score, best_reason
+    
+    
+    def _find_pagerduty_incident_for_current_expel(search_terms: List[str]) -> Optional[Tuple[Dict[str, Any], str]]:
+        for term in search_terms:
+            direct_match = _get_pagerduty_incident_by_key(term)
+            if direct_match:
+                return direct_match, f'incident_key matched "{term}"'
+    
+        results = _execute_platform_command(
+            "PagerDuty-incidents",
+            {
+                "since": _utc_days_ago_iso(DEFAULT_PAGERDUTY_SEARCH_DAYS),
+                "status": PAGERDUTY_FETCH_STATUSES,
+                "limit": DEFAULT_PAGERDUTY_SEARCH_LIMIT,
+            },
+        )
+        incidents = _extract_pagerduty_incidents_from_results(results)
+        if not incidents:
+            return None
+    
+        scored_matches: List[Tuple[int, str, Dict[str, Any]]] = []
+        for incident in incidents:
+            score, reason = _score_pagerduty_incident_match(incident, search_terms)
+            if score > 0:
+                scored_matches.append((score, reason, incident))
+    
+        if not scored_matches:
+            return None
+    
+        scored_matches.sort(
+            key=lambda item: (
+                item[0],
+                str(item[2].get("last_status_change_at") or item[2].get("created_at") or ""),
+            ),
+            reverse=True,
+        )
+        top_score = scored_matches[0][0]
+        top_matches = [match for match in scored_matches if match[0] == top_score]
+        if len(top_matches) > 1:
+            candidate_ids = [str(match[2].get("id") or "") for match in top_matches[:5]]
+            raise DemistoException(
+                "Multiple PagerDuty incidents matched the current Expel investigation references. "
+                f"Provide pagerduty_incident_id or pagerduty_incident_key explicitly. Candidates: {', '.join(candidate_ids)}"
+            )
+    
+        best_score, best_reason, best_incident = scored_matches[0]
+        if best_score < 80:
+            return None
+        return best_incident, best_reason
+    
+    
+    def _set_pagerduty_link_fields(pagerduty_incident: Dict[str, Any]) -> None:
+        service = pagerduty_incident.get("service") or {}
+        set_incident_args = {
+            PAGERDUTY_LINK_FIELD_MAP["pagerdutyincidentid"]: pagerduty_incident.get("id"),
+            PAGERDUTY_LINK_FIELD_MAP["pagerdutydedupkey"]: pagerduty_incident.get("incident_key"),
+            PAGERDUTY_LINK_FIELD_MAP["pagerdutyincidenturl"]: pagerduty_incident.get("html_url"),
+            PAGERDUTY_LINK_FIELD_MAP["pagerdutystatus"]: pagerduty_incident.get("status"),
+            PAGERDUTY_LINK_FIELD_MAP["pagerdutyservicename"]: service.get("summary") or service.get("name"),
+        }
+        _execute_platform_command("setIncident", set_incident_args)
+    
+    
+    def link_pagerduty_incident_command(args: Dict[str, Any]) -> CommandResults:
+        pagerduty_incident_id = _normalize_single_value(args.get("pagerduty_incident_id"), "pagerduty_incident_id", allow_empty=True)
+        pagerduty_incident_key = _normalize_single_value(args.get("pagerduty_incident_key"), "pagerduty_incident_key", allow_empty=True)
+        existing_pagerduty_incident_id = _get_current_incident_value("pagerdutyincidentid")
+        existing_dedup_key = _get_current_incident_value("pagerdutydedupkey")
+        search_reason = ""
+        link_notice = ""
+    
+        pagerduty_incident: Optional[Dict[str, Any]] = None
+        if pagerduty_incident_id:
+            pagerduty_incident = _get_pagerduty_incident_by_id(pagerduty_incident_id)
+            search_reason = f'pagerduty_incident_id matched "{pagerduty_incident_id}"'
+        elif pagerduty_incident_key:
+            pagerduty_incident = _get_pagerduty_incident_by_key(pagerduty_incident_key)
+            if not pagerduty_incident:
+                raise DemistoException(f'PagerDuty incident key "{pagerduty_incident_key}" was not found.')
+            search_reason = f'pagerduty_incident_key matched "{pagerduty_incident_key}"'
+        elif existing_pagerduty_incident_id:
+            pagerduty_incident = _get_pagerduty_incident_by_id(existing_pagerduty_incident_id)
+            search_reason = f'existing PagerDuty incident ID "{existing_pagerduty_incident_id}" was refreshed'
+        elif existing_dedup_key:
+            pagerduty_incident = _get_pagerduty_incident_by_key(existing_dedup_key)
+            if pagerduty_incident:
+                search_reason = f'existing PagerDuty dedup key "{existing_dedup_key}" was refreshed'
+    
+        if not pagerduty_incident:
+            search_terms = _get_expel_pagerduty_search_terms()
+            if search_terms:
+                auto_match = _find_pagerduty_incident_for_current_expel(search_terms)
+                if auto_match:
+                    pagerduty_incident, search_reason = auto_match
+    
+        if not pagerduty_incident:
+            search_terms = _get_expel_pagerduty_search_terms()
+            search_hint = ", ".join(search_terms) if search_terms else "none"
+            return CommandResults(
+                readable_output=(
+                    "No PagerDuty action taken. "
+                    f'No existing PagerDuty incident matched the Expel references: {search_hint}. '
+                    "Provide pagerduty_incident_id or pagerduty_incident_key explicitly if needed."
+                ),
+                outputs_prefix="Expel.PagerDutyLink",
+                outputs={
+                    "Linked": False,
+                    "SearchTerms": search_terms,
+                },
+            )
+    
+        if _platform_commands_supported():
+            _set_pagerduty_link_fields(pagerduty_incident)
+        else:
+            link_notice = (
+                "Current incident fields were not updated because this XSOAR integration runtime "
+                "does not support setIncident from integration commands."
+            )
+        service = pagerduty_incident.get("service") or {}
+        output = {
+            "Linked": True,
+            "UpdatedIncidentFields": not bool(link_notice),
+            "IncidentID": pagerduty_incident.get("id"),
+            "IncidentKey": pagerduty_incident.get("incident_key"),
+            "Status": pagerduty_incident.get("status"),
+            "HtmlUrl": pagerduty_incident.get("html_url"),
+            "ServiceName": service.get("summary") or service.get("name"),
+            "SearchReason": search_reason,
+        }
+        readable_output = tableToMarkdown("PagerDuty Link", [output], removeNull=True)
+        if link_notice:
+            readable_output = f"{readable_output}\n\n{link_notice}"
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix="Expel.PagerDutyLink",
+            outputs_key_field="IncidentID",
+            outputs=output,
+            raw_response=pagerduty_incident,
+        )
+    
+    
+    def _normalize_filter_value(value: Any) -> Any:
+        if isinstance(value, str):
+            if value.startswith(">="):
+                return f"\u2265{value[2:]}"
+            if value.startswith("<="):
+                return f"\u2264{value[2:]}"
+        return value
+    
+    
+    def _add_nested_params(params: Dict[str, Any], prefix: str, obj: Dict[str, Any]) -> None:
+        for key, value in obj.items():
+            if isinstance(value, dict):
+                _add_nested_params(params, f"{prefix}[{key}]", value)
+            else:
+                if prefix.startswith("filter"):
+                    value = _normalize_filter_value(value)
+                params[f"{prefix}[{key}]"] = value
+    
+    
+    def _build_list_params(args: Dict[str, Any], default_filters: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        params: Dict[str, Any] = {}
+    
+        include = args.get("include")
+        sort = args.get("sort")
+        limit = arg_to_number(args.get("limit")) if args.get("limit") is not None else None
+        offset = arg_to_number(args.get("offset")) if args.get("offset") is not None else None
+    
+        if include:
+            if not str(include).strip():
+                raise DemistoException("include cannot be empty when provided.")
+            params["include"] = include
+        if sort:
+            if not str(sort).strip():
+                raise DemistoException("sort cannot be empty when provided.")
+            params["sort"] = sort
+        if limit is not None:
+            if limit < 0:
+                raise DemistoException("limit must be a non-negative integer.")
+            params["page[limit]"] = limit
+        if offset is not None:
+            if offset < 0:
+                raise DemistoException("offset must be a non-negative integer.")
+            params["page[offset]"] = offset
+    
+        filter_arg = args.get("filter")
+        if filter_arg:
+            filters = _parse_json_arg(filter_arg, "filter")
+        else:
+            filters = default_filters or {}
+    
+        if filters and not isinstance(filters, dict):
+            raise DemistoException('filter must be a JSON object.')
+    
+        if filters:
+            _add_nested_params(params, "filter", filters)
+    
+        flag_arg = args.get("flag")
+        if flag_arg:
+            flags = _parse_json_arg(flag_arg, "flag")
+            if flags and not isinstance(flags, dict):
+                raise DemistoException('flag must be a JSON object.')
+            if flags:
+                _add_nested_params(params, "flag", flags)
+    
+        return params
+    
+    
+    def get_investigations_command(client: Client) -> CommandResults:
+        """
+        Cortex XSOAR command to get Expel investigations.
+        """
+        demisto.log('Fetching investigations...')
+        params = _build_list_params(
+            demisto.args(),
+            default_filters={"created_at": f"\u2265{_utc_days_ago_iso(7)}"},
+        )
+        response = client.get_investigations(params=params)
+    
+        if response is None:
+            raise DemistoException(f'Request failed: the response from the server did not include {response}')
+    
+        jdata = response.get("data") or []
+    
+        # Empty list for Investigation objects
+        investigations = []
+    
+        for i in range(0,len(jdata)):
+            investigations.append({"type":jdata[i]["type"], "id":jdata[i]["id"], "title":jdata[i]["attributes"]["title"], "created":jdata[i]["attributes"]["created_at"]})
+    
+        # Sorting list by time
+        investigations = sorted(investigations, key=lambda x: x['created'], reverse=True)
+    
+        # Create a human-readable table
+        readable_output = tableToMarkdown(
+            name='Expel Investigations',
+            t=investigations,
+            headers=['type', 'id', 'title', 'created'],
+            #headerTransform=string_to_markdown
+        )
+    
+        # Return the results
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix='expel.investigations',
+            outputs_key_field='id',
+            outputs=investigations,
+            raw_response=response
+        )
+    
+    def get_investigation_details_command(
+        client: Client,
+        id: str,
+        relation=None,
+        sync_to_incident: bool = False,
+        incident_type: str = "Expel Investigation",
+        time_field: str = DEFAULT_MIRROR_TIME_FIELD,
+    ) -> CommandResults:
+        """
+        Cortex XSOAR command to get the specified Expel investigation details.
+        """
+    
+        if not id:
+            raise DemistoException('the id argument cannot be empty.')
+    
+        params = _build_list_params(demisto.args())
+        relation = _validate_allowed_value(relation, "relation", ALLOWED_INVESTIGATION_RELATIONS)
+    
+        if relation:
+    
+            demisto.log('Fetching investigation details...')
+    
+            response = client.get_investigation_details(id=id, relation=relation, params=params)
+    
+            if response is None:
+                raise DemistoException(f'Request failed: the response from the server did not include {response}')
+    
+    
+            # Create a human-readable table
+            readable_output = tableToMarkdown(
+                name='Expel Investigation Details',
+                t=response.get('data', []),
+                headers=['id', 'attributes'],
+                #headerTransform=string_to_markdown
+            )
+    
+            # Return the results
+            return CommandResults(
+                readable_output=readable_output,
+                outputs_prefix='Expel.Investigation.Details',
+                outputs_key_field='id',
+                outputs=response.get('data', []),
+                raw_response=response
+            )
+        #Else statement if the relation argument doesn't exist.
+        else:
+            demisto.log('Fetching investigation details...')
+    
+            response = client.get_investigation_details(id, params=params)
+    
+            if response is None:
+                raise DemistoException(f'Request failed: the response from the server did not include {response}')
+    
+            response_data = response.get("data") or {}
+            skipped_sync_fields: List[str] = []
+            sync_notice = ""
+            if sync_to_incident and isinstance(response_data, dict) and response_data:
+                if _platform_commands_supported():
+                    skipped_sync_fields = _sync_current_incident_from_investigation(
+                        client=client,
+                        item=response_data,
+                        incident_type=incident_type,
+                        time_field=_get_mirror_time_field(time_field),
+                    )
+                else:
+                    sync_notice = (
+                        "Direct incident sync was skipped because this XSOAR 6.14 integration runtime "
+                        "does not support setIncident from integration commands. "
+                        "Use inbound mirroring for automatic Expel updates, or a separate automation "
+                        "if you need on-demand incident field synchronization."
+                    )
+    
+            # Create a human-readable table
+            readable_output = tableToMarkdown(
+                name='Expel Investigation Details',
+                t=response.get('data', []),
+                headers=['id', 'attributes'],
+    
+            )
+            if skipped_sync_fields:
+                readable_output = (
+                    f"{readable_output}\n\n"
+                    "Incident sync skipped unsupported or unavailable fields: "
+                    f"{', '.join(skipped_sync_fields)}. "
+                    "Import the latest Expel custom fields if you want these values populated."
+                )
+            if sync_notice:
+                readable_output = f"{readable_output}\n\n{sync_notice}"
+    
+        # Return the results
+            return CommandResults(
+                readable_output=readable_output,
+                outputs_prefix='Expel.Investigation.Details',
+                outputs_key_field='id',
+                outputs=response.get('data', []),
+                raw_response=response
+            )
+    
+    
+    
+    def get_incident_sync_data_command(
+        client: Client,
+        id: str,
+        incident_type: str = "Expel Investigation",
+        time_field: str = DEFAULT_MIRROR_TIME_FIELD,
+    ) -> CommandResults:
+        """
+        Returns the normalized incident payload for an Expel investigation so an automation
+        can apply it to the current XSOAR incident on-demand.
+        """
+        if not id:
+            raise DemistoException('the id argument cannot be empty.')
+    
+        response = client.get_investigation_details(id=id, params=_build_list_params(demisto.args()))
+        if response is None:
+            raise DemistoException(f'Request failed: the response from the server did not include {response}')
+    
+        item = response.get("data") or {}
+        if not isinstance(item, dict) or not item:
+            raise DemistoException(f"Expel investigation {id} was not found.")
+    
+        mirrored_object = _build_xsoar_incident_from_investigation(
+            client=client,
+            item=item,
+            incident_type=incident_type,
+            time_field=_get_mirror_time_field(time_field),
+        )
+        payload = _build_incident_sync_payload(mirrored_object)
+        summary_row = {
+            "InvestigationID": payload.get("InvestigationID"),
+            "Name": payload.get("name"),
+            "Severity": payload.get("severity"),
+            "CustomFieldCount": len(payload.get("custom_fields") or {}),
+        }
+        return CommandResults(
+            readable_output=tableToMarkdown("Expel Investigation Sync Payload", [summary_row], removeNull=True),
+            outputs_prefix="Expel.Investigation.SyncPayload",
+            outputs_key_field="InvestigationID",
+            outputs=payload,
+            raw_response={
+                "payload": payload,
+                "investigation": response,
+            },
+        )
+    
+    
+    def get_alerts_command(client: Client) -> CommandResults:
+        """
+        Cortex XSOAR command to get Expel alerts.
+        """
+    
+        demisto.log('Fetching alerts...')
+        params = _build_list_params(
+            demisto.args(),
+            default_filters={"created_at": f"\u2265{_utc_days_ago_iso(1)}"},
+        )
+        response = client.get_alerts(params=params)
+    
+        if response is None:
+            raise DemistoException(f'Request failed: the response from the server did not include {response}')
+    
+        jdata = response.get("data") or []
+    
+        # Empty list for alert objects
+        alerts = []
+    
+        for i in range(0,len(jdata)):
+            alerts.append({"type":jdata[i]["type"], "id":jdata[i]["id"], "title":jdata[i]["attributes"]["expel_name"], "created":jdata[i]["attributes"]["created_at"], "severity":jdata[i]["attributes"]["expel_severity"],})
+    
+        # Sorting list by time
+        alerts = sorted(alerts, key=lambda x: x['created'], reverse=True)
+    
+        # Create a human-readable table
+        readable_output = tableToMarkdown(
+            name='Expel Alerts',
+            t=alerts,
+            headers=['type', 'id', 'title', 'created', 'severity'],
+    
+        )
+    
+        # Return the results
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix='expel.alerts',
+            outputs_key_field='id',
+            outputs=alerts,
+            raw_response=response,
+        )
+    
+    
+    def get_alert_details_command(client: Client, id: str, relation=None) -> CommandResults:
+        """
+        Cortex XSOAR command to get the specified Expel investigation details.
+        """
+    
+        if not id:
+            raise DemistoException('the id argument cannot be empty.')
+    
+        params = _build_list_params(demisto.args())
+        relation = _validate_allowed_value(relation, "alert_relation", ALLOWED_ALERT_RELATIONS)
+    
+        if relation:
+    
+            demisto.log('Fetching alert details...')
+            response = client.get_alert_details(id=id, relation=relation, params=params)
+    
+            if response is None:
+                raise DemistoException(f'Request failed: the response from the server did not include {response}')
+    
+            # Create a human-readable table
+            readable_output = tableToMarkdown(
+                name='Expel Alert Details',
+                t=response.get('data', []),
+                headers=['id', 'attributes'],
+                #headerTransform=string_to_markdown
+            )
+    
+            # Return the results
+            return CommandResults(
+                readable_output=readable_output,
+                outputs_prefix='Expel.Alerts.Details',
+                outputs_key_field='id',
+                outputs=response.get('data', []),
+                raw_response=response
+            )
+        else:
+    
+            demisto.log('Fetching alert details...')
+            response = client.get_alert_details(id=id, params=params)
+    
+            if response is None:
+                raise DemistoException(f'Request failed: the response from the server did not include {response}')
+    
+            # Create a human-readable table
+            readable_output = tableToMarkdown(
+                name='Expel Alert Details',
+                t=response.get('data', []),
+                headers=['id', 'attributes'],
+                #headerTransform=string_to_markdown
+            )
+    
+            # Return the results
+            return CommandResults(
+                readable_output=readable_output,
+                outputs_prefix='Expel.Alerts.Details',
+                outputs_key_field='id',
+                outputs=response.get('data', []),
+                raw_response=response
+            )
+    
+    
+    
+    def post_context_upload_command(client: Client, data):
+    
+        """
+        Cortex XSOAR command to upload context to our Expel Workbench instance.
+        """
+    
+        if not data:
+            raise DemistoException('the data argument cannot be empty.')
+    
+        else:
+    
+             demisto.log('Posting context to Expel Workbench...')
+             response = client.post_context_upload(data)
+    
+             readable_output = tableToMarkdown(
+                 name='Expel Context Upload',
+                 t=response.get('data', response),
+             )
+    
+             return CommandResults(
+                 readable_output=readable_output,
+                 outputs_prefix='Expel.Context.Upload',
+                 outputs=response.get('data', response),
+                 raw_response=response,
+             )
+    
+    
+    def patch_context_update_command(client: Client, context_id: str, data: Optional[Dict[str, Any]]) -> CommandResults:
+        if not context_id:
+            raise DemistoException('the context_id argument cannot be empty.')
+    
+        if not data:
+            raise DemistoException('the data argument cannot be empty.')
+    
+        demisto.log('Updating context in Expel Workbench...')
+        response = client.patch_context_update(context_id=context_id, data=data)
+    
+        readable_output = tableToMarkdown(
+            name='Expel Context Update',
+            t=response.get('data', response),
+        )
+    
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix='Expel.Context.Update',
+            outputs=response.get('data', response),
+            raw_response=response,
+        )
+    
+    
+    def delete_context_variable_command(client: Client, context_id: str) -> CommandResults:
+        if not context_id:
+            raise DemistoException('the context_id argument cannot be empty.')
+    
+        demisto.log('Deleting context variable in Expel Workbench...')
+        response = client.delete_context_variable(context_id=context_id)
+    
+        readable_output = tableToMarkdown(
+            name='Expel Context Delete',
+            t=response if isinstance(response, dict) else {"result": response},
+        )
+    
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix='Expel.Context.Delete',
+            outputs=response,
+            raw_response=response,
+        )
+    
+    
+    def get_alert_count_by_severity_command(client: Client) -> CommandResults:
+        params = _build_list_params(demisto.args())
+        response = client.get_alert_count_by_severity(params=params)
+    
+        readable_output = tableToMarkdown(
+            name='Expel Alert Count By Severity',
+            t=response.get('data', response),
+        )
+    
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix='Expel.Alerts.CountBySeverity',
+            outputs=response.get('data', response),
+            raw_response=response,
+        )
+    
+    
+    def get_investigation_history_timeline_command(client: Client, investigation_id: str) -> CommandResults:
+        if not investigation_id:
+            raise DemistoException('the investigation_id argument cannot be empty.')
+    
+        response = client.get_investigation_history_timeline(investigation_id=investigation_id)
+        readable_output = tableToMarkdown(
+            name='Expel Investigation History Timeline',
+            t=response.get('data', response),
+        )
+    
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix='Expel.Investigation.History',
+            outputs=response.get('data', response),
+            raw_response=response,
+        )
+    
+    
+    def get_alert_history_timeline_command(client: Client, alert_id: str) -> CommandResults:
+        if not alert_id:
+            raise DemistoException('the alert_id argument cannot be empty.')
+    
+        response = client.get_alert_history_timeline(alert_id=alert_id)
+        readable_output = tableToMarkdown(
+            name='Expel Alert History Timeline',
+            t=response.get('data', response),
+        )
+    
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix='Expel.Alert.History',
+            outputs=response.get('data', response),
+            raw_response=response,
+        )
+    
+    
+    def search_events_command(client: Client) -> CommandResults:
+        args = demisto.args()
+        filter_obj = _parse_json_arg(args.get("filter"), "filter") if args.get("filter") else {}
+    
+        name = args.get("name")
+        ip = args.get("ip")
+        hostname = args.get("hostname")
+        username = args.get("username")
+        file_hash = args.get("file_hash") or args.get("fileHash")
+        time_from = args.get("from")
+        time_to = args.get("to")
+        phrase = args.get("phrase")
+        organization_id = args.get("organization_id")
+        vendor_name = args.get("vendor_name")
+    
+        if name:
+            filter_obj["name"] = name
+        if ip:
+            filter_obj["ip"] = ip
+        if hostname:
+            filter_obj["hostname"] = hostname
+        if username:
+            filter_obj["username"] = username
+        if file_hash:
+            filter_obj["fileHash"] = file_hash
+        if time_from:
+            _parse_iso8601(time_from, "from")
+            filter_obj["from"] = time_from
+        if time_to:
+            _parse_iso8601(time_to, "to")
+            filter_obj["to"] = time_to
+        if phrase:
+            filter_obj["phrase"] = phrase
+        if organization_id:
+            filter_obj.setdefault("organization", {})["id"] = organization_id
+        if vendor_name:
+            filter_obj.setdefault("vendor", {})["name"] = vendor_name
+    
+        if time_from and time_to:
+            if _parse_iso8601(time_to, "to") < _parse_iso8601(time_from, "from"):
+                raise DemistoException('"to" must be greater than or equal to "from".')
+    
+        if not any(filter_obj.get(k) for k in ("name", "ip", "hostname", "username", "fileHash", "phrase")):
+            raise DemistoException(
+                'At least one of name, ip, hostname, username, fileHash, or phrase must be provided for event search.'
+            )
+    
+        params: Dict[str, Any] = {}
+        _add_nested_params(params, "filter", filter_obj)
+    
+        response = client.search_events(params=params)
+        readable_output = tableToMarkdown(
+            name='Expel Event Search Results',
+            t=response.get('data', response),
+        )
+    
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix='Expel.Events.Search',
+            outputs=response.get('data', response),
+            raw_response=response,
+        )
+    
+    
+    def get_health_command(client: Client) -> CommandResults:
+        args = demisto.args()
+        auth = argToBoolean(args.get("auth")) if args.get("auth") is not None else False
+        heartbeat = argToBoolean(args.get("heartbeat")) if args.get("heartbeat") is not None else False
+        component = args.get("component")
+    
+        if auth and heartbeat:
+            raise DemistoException('auth and heartbeat cannot both be true.')
+    
+        params: Dict[str, Any] = {}
+        if component:
+            _add_nested_params(params, "filter", {"component": component})
+    
+        response = client.get_health(auth=auth, heartbeat=heartbeat, params=params or None)
+    
+        readable_output = tableToMarkdown(
+            name='Expel Health',
+            t=response.get('data', response),
+        )
+    
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix='Expel.Health',
+            outputs=response.get('data', response),
+            raw_response=response,
+        )
+    
+    
+    def get_info_command(client: Client) -> CommandResults:
+        response = client.get_info()
+        readable_output = tableToMarkdown(
+            name='Expel API Info',
+            t=response.get('data', response),
+        )
+    
+        return CommandResults(
+            readable_output=readable_output,
+            outputs_prefix='Expel.Info',
+            outputs=response.get('data', response),
+            raw_response=response,
+        )
+    
+    
+    def fetch_incidents(
+        client: Client,
+        last_run: Dict[str, Any],
+        first_fetch: str,
+        max_fetch: int,
+        incident_type: str,
+        time_field: str,
+    ) -> Tuple[Dict[str, Any], List[Dict[str, Any]]]:
+        if max_fetch < 1 or max_fetch > MAX_FETCH_INCIDENTS:
+            raise DemistoException(f"max_fetch must be between 1 and {MAX_FETCH_INCIDENTS}.")
+    
+        last_fetch = last_run.get("last_fetch")
+        last_ids = set(_normalize_id_list(last_run.get("last_ids")))
+        fetched_ids = _normalize_id_list(last_run.get("fetched_ids"))[-MAX_TRACKED_FETCH_IDS:]
+        fetched_ids_set = set(fetched_ids)
+        if last_fetch:
+            since = last_fetch
+        else:
+            since = _parse_first_fetch(first_fetch)
+    
+        try:
+            since_dt = _to_datetime(since, "last_fetch")
+        except Exception:
+            since = _parse_first_fetch(first_fetch)
+            since_dt = _to_datetime(since, "first_fetch")
+            last_ids = set()
+            fetched_ids = []
+            fetched_ids_set = set()
+        since_str = _to_iso8601_utc(since_dt)
+    
+        incidents: List[Dict[str, Any]] = []
+        offset = 0
+        page_size = min(max_fetch, 50)
+        newest_dt = since_dt
+        newest_ids = list(last_ids)
+        newest_ids_set = set(last_ids)
+    
+        while len(incidents) < max_fetch:
+            resp = client.get_incident_investigations(
+                since=since_str,
+                limit=page_size,
+                offset=offset,
+                time_field=time_field,
+            )
+            data = resp.get("data") or []
+            if not data:
+                break
+    
+            for item in data:
+                incident_id = item.get("id")
+                incident_id_str = str(incident_id) if incident_id is not None else ""
+                time_dt = _to_datetime(_get_investigation_modified_time_value(item, time_field), time_field)
+                if time_dt > newest_dt:
+                    newest_dt = time_dt
+                    newest_ids = []
+                    newest_ids_set = set()
+                if time_dt == newest_dt and incident_id_str and incident_id_str not in newest_ids_set:
+                    newest_ids.append(incident_id_str)
+                    newest_ids_set.add(incident_id_str)
+                # Fetch creates the incident once; inbound mirroring handles later remote updates.
+                if incident_id_str and incident_id_str in fetched_ids_set:
+                    continue
+                if time_dt == since_dt and incident_id_str and incident_id_str in last_ids:
+                    continue
+                incidents.append(_build_xsoar_incident_from_investigation(
+                    client=client,
+                    item=item,
+                    incident_type=incident_type,
+                    time_field=time_field,
+                ))
+                _append_tracked_id(fetched_ids, fetched_ids_set, incident_id_str, MAX_TRACKED_FETCH_IDS)
+    
+                if len(incidents) >= max_fetch:
+                    break
+    
+            if len(data) < page_size:
+                break
+    
+            offset += page_size
+    
+        next_run = {
+            "last_fetch": _to_iso8601_utc(newest_dt),
+            "last_ids": newest_ids,
+            "fetched_ids": fetched_ids,
+        }
+        return next_run, incidents
+    
+    
+    def main() -> None:
+        """
+        Main function for the Expel Workbench integration.
+        """
+        #Assigning variables to XSOAR arguments and parameters
+        params = demisto.params()
+        args = demisto.args()
+        command = demisto.command()
+    
+        api_key = params.get('apikey',{}).get('password')
+        base_url = _validate_base_url(params.get('url'))
+        verify = not params.get('insecure', False)
+        proxy = params.get('proxy', False)
+        first_fetch = params.get("first_fetch", "7 days")
+        max_fetch = int(params.get("max_fetch", 50))
+        incident_type = params.get("incident_type", "Expel Investigation")
+        fetch_time_field = params.get("fetch_time_field", "updated_at")
+    
+        if not verify:
+            requests.packages.urllib3.disable_warnings()  # pylint: disable=no-member
+    
+    
+        demisto.debug(f'Command being called is {command}')
+    
+    
+        try:
+            client = Client(
+                api_key=api_key,
+                base_url=base_url,
+                verify=verify,
+                proxy=proxy
+            )
+    
+            if command == 'test-module':
+                return_results(test_module(client))
+            elif command == 'expel-get-investigations':
+                return_results(get_investigations_command(client))
+            # Add more command handlers here
+            elif command == 'expel-get-investigation-details':
+                investigationID = args.get('investigationID')
+                sync_to_incident = argToBoolean(args.get("sync_to_incident")) if args.get("sync_to_incident") is not None else False
+                if args.get('relation'):
+                    relation = args.get('relation')
+                    return_results(
+                        get_investigation_details_command(
+                            client,
+                            id=investigationID,
+                            relation=relation,
+                            sync_to_incident=sync_to_incident,
+                            incident_type=incident_type,
+                            time_field=fetch_time_field,
+                        )
+                    )
+                else:
+                    return_results(
+                        get_investigation_details_command(
+                            client,
+                            id=investigationID,
+                            sync_to_incident=sync_to_incident,
+                            incident_type=incident_type,
+                            time_field=fetch_time_field,
+                        )
+                    )
+            elif command == 'expel-get-incident-sync-data':
+                investigationID = args.get('investigationID') or args.get('investigation_id')
+                return_results(
+                    get_incident_sync_data_command(
+                        client,
+                        id=investigationID,
+                        incident_type=incident_type,
+                        time_field=fetch_time_field,
+                    )
+                )
+            # Add more command handlers here
+            elif command == 'expel-get-alerts':
+                return_results(get_alerts_command(client))
+            # Add more command handlers here
+            elif command == 'expel-get-alert-details':
+                alertID = args.get('alertID')
+                if args.get('alert_relation'):
+                    alert_relation = args.get('alert_relation')
+                    return_results(get_alert_details_command(client, id=alertID, relation=alert_relation))
+                else:
+                    return_results(get_alert_details_command(client, id=alertID))
+            elif command == 'expel-post-context-upload':
+                data = args.get('contextData')
+                return_results(post_context_upload_command(client, data=data))
+            elif command == 'expel-context-update':
+                context_id = args.get('context_id')
+                data_arg = args.get('contextUpdate') or args.get('contextData')
+                if data_arg:
+                    data = _parse_json_arg(data_arg, "contextUpdate")
+                    if not isinstance(data, dict):
+                        raise DemistoException('contextUpdate must be a JSON object.')
+                else:
+                    categories = args.get("categories")
+                    tags = args.get("tags")
+                    if categories:
+                        categories = _parse_json_arg(categories, "categories")
+                    if tags:
+                        tags = _parse_json_arg(tags, "tags")
+                    data = {
+                        "name": args.get("name"),
+                        "description": args.get("description"),
+                        "surface_context": argToBoolean(args.get("surface_context")) if args.get("surface_context") is not None else None,
+                        "value": args.get("value"),
+                        "categories": categories,
+                        "tags": tags,
+                    }
+                    data = {k: v for k, v in data.items() if v is not None}
+                return_results(patch_context_update_command(client, context_id=context_id, data=data))
+            elif command == 'expel-context-delete':
+                context_id = args.get('context_id')
+                return_results(delete_context_variable_command(client, context_id=context_id))
+            elif command == 'expel-get-alert-count-by-severity':
+                return_results(get_alert_count_by_severity_command(client))
+            elif command == 'expel-get-investigation-history':
+                investigation_id = args.get('investigationID') or args.get('investigation_id')
+                return_results(get_investigation_history_timeline_command(client, investigation_id=investigation_id))
+            elif command == 'expel-get-alert-history':
+                alert_id = args.get('alertID') or args.get('alert_id')
+                return_results(get_alert_history_timeline_command(client, alert_id=alert_id))
+            elif command == 'expel-search-events':
+                return_results(search_events_command(client))
+            elif command == 'expel-get-health':
+                return_results(get_health_command(client))
+            elif command == 'expel-get-info':
+                return_results(get_info_command(client))
+            elif command == 'expel-link-pagerduty-incident':
+                return_results(link_pagerduty_incident_command(args))
+            elif command == 'get-modified-remote-data':
+                last_update = args.get("lastUpdate") or args.get("last_update") or ""
+                return_results(
+                    get_modified_remote_data_command(
+                        client,
+                        last_update=last_update,
+                        first_fetch=first_fetch,
+                        fetch_time_field=fetch_time_field,
+                    )
+                )
+            elif command == 'get-remote-data':
+                remote_id = (
+                    args.get("id")
+                    or args.get("remoteId")
+                    or args.get("remote_id")
+                    or args.get("remoteIncidentId")
+                    or args.get("remote_incident_id")
+                    or args.get("incident_id")
+                )
+                return_results(
+                    get_remote_data_command(
+                        client,
+                        remote_id=remote_id,
+                        incident_type=incident_type,
+                        fetch_time_field=fetch_time_field,
+                    )
+                )
+            elif command == 'fetch-incidents':
+                # XSOAR calls this branch on the periodic fetch interval when Fetch incidents is enabled.
+                if fetch_time_field not in ("created_at", "updated_at", "status_updated_at", "is_incident_status_updated_at"):
+                    raise DemistoException(
+                        'fetch_time_field must be one of "created_at", "updated_at", "status_updated_at", or "is_incident_status_updated_at".'
+                    )
+                next_run, incidents = fetch_incidents(
+                    client=client,
+                    last_run=demisto.getLastRun(),
+                    first_fetch=first_fetch,
+                    max_fetch=max_fetch,
+                    incident_type=incident_type,
+                    time_field=fetch_time_field,
+                )
+                demisto.setLastRun(next_run)
+                demisto.incidents(incidents)
+            # Add more command handlers here
+            else:
+                raise NotImplementedError(f'Command not implemented: {command}')
+    
+        except Exception as e:
+            demisto.error(_sanitize_error_text(traceback.format_exc(), secret_values=[api_key]))
+            if isinstance(e, DemistoException):
+                return_error(f'Failed to execute {command} command. Error: {_sanitize_error_text(e, secret_values=[api_key])}')
+            return_error(f'Failed to execute {command} command. Error: unexpected error. Review server logs for details.')
+    
+    
+    
+    """ ENTRY POINT """
+    
+    if __name__ in ("__main__", "__builtin__", "builtins"):
+        main()
+  commands:
+  - name: expel-get-investigations
+    arguments:
+    - name: include
+      description: Comma-separated related resources to include.
+      type: textArea
+    - name: sort
+      description: Sort field (prefix with '-' for descending).
+      type: textArea
+    - name: limit
+      description: Maximum number of results (non-negative integer).
+      type: textArea
+    - name: offset
+      description: Results offset for pagination (non-negative integer).
+      type: textArea
+    - name: filter
+      description: 'JSON object for filter parameters (e.g., {"created_at": "≥2024-01-01T00:00:00Z"}).'
+      type: textArea
+    - name: flag
+      description: JSON object for flag parameters.
+      type: textArea
+    outputs:
+    - contextPath: expel.investigations
+      description: List of the latest investigations over the last 24 hours.
+      type: string
+    description: Retrieves a list of the latest investigations created in the past
+      7 days.
+    examples:
+    - description: List investigations created since a given time.
+      arguments:
+        filter: '{"created_at": "≥2024-01-01T00:00:00Z"}'
+        limit: "10"
+  - name: expel-get-investigation-details
+    arguments:
+    - name: investigationID
+      required: true
+      description: The ID of the particular investigation.
+      type: textArea
+    - name: include
+      description: Comma-separated related resources to include.
+      type: textArea
+    - name: filter
+      description: JSON object for filter parameters.
+      type: textArea
+    - name: relation
+      auto: PREDEFINED
+      predefined:
+      - analyst_activity_timeline
+      - assigned_to_actor
+      - close_comment_updated_by
+      - comment_histories
+      - comments
+      - context_label_action_histories
+      - context_label_actions
+      - context_labels
+      - created_by
+      - destination_ip_addresses
+      - emerging_threat_scan_result
+      - escalated_expel_alerts
+      - evidence
+      - expel_alert_histories
+      - expel_alerts
+      - files
+      - findings
+      - hunt_technique
+      - investigation_finding_histories
+      - investigation_histories
+      - investigation_resilience_actions
+      - investigative_action_histories
+      - investigative_actions
+      - ip_addresses
+      - last_published_by
+      - lead_description_updated_by
+      - lead_expel_alert
+      - lookback_result
+      - most_recent_investigative_action
+      - organization
+      - organization_resilience_action_hints
+      - organization_resilience_actions
+      - related_investigations_via_involved_host_ips
+      - remediation_action_asset_histories
+      - remediation_action_assets
+      - remediation_action_histories
+      - remediation_actions
+      - review_requested_by
+      - source_ip_addresses
+      - status_last_up
+      description: Use this route to query or list records related to a particular
+        known record(i.e. status, comments, comment history).
+      isArray: true
+      type: unknown
+    - name: sync_to_incident
+      description: >-
+        When true and no relation is provided, update the current XSOAR incident
+        fields from the fetched investigation, including the remediation
+        checklist and remediation counts.
+      type: boolean
+    outputs:
+    - contextPath: Expel.Investigation.Details
+      description: Details of the specified investigation.
+      type: string
+    description: Fetches details for a specific investigation.
+    examples:
+    - description: Fetch investigation details with related evidence.
+      arguments:
+        investigationID: "12345"
+        relation: evidence
+    - description: Fetch investigation details and sync the current XSOAR incident fields.
+      arguments:
+        investigationID: "12345"
+        sync_to_incident: "true"
+  - name: expel-get-incident-sync-data
+    arguments:
+    - name: investigationID
+      required: true
+      description: The ID of the Expel investigation to normalize into an incident sync payload.
+      type: textArea
+    outputs:
+    - contextPath: Expel.Investigation.SyncPayload.InvestigationID
+      description: Expel investigation ID used for the sync payload.
+      type: string
+    - contextPath: Expel.Investigation.SyncPayload.name
+      description: Incident name derived from the Expel investigation.
+      type: string
+    - contextPath: Expel.Investigation.SyncPayload.details
+      description: Incident details derived from the Expel investigation.
+      type: string
+    - contextPath: Expel.Investigation.SyncPayload.severity
+      description: XSOAR severity derived from Expel analyst severity.
+      type: number
+    - contextPath: Expel.Investigation.SyncPayload.custom_fields
+      description: Custom field payload ready to be applied to the current incident.
+      type: unknown
+    description: >-
+      Builds the normalized XSOAR incident sync payload for an Expel
+      investigation. Intended for automations that perform on-demand incident
+      updates.
+    examples:
+    - description: Build an incident sync payload for an Expel investigation.
+      arguments:
+        investigationID: "12345"
+  - name: expel-get-alerts
+    arguments:
+    - name: include
+      description: Comma-separated related resources to include.
+      type: textArea
+    - name: sort
+      description: Sort field (prefix with '-' for descending).
+      type: textArea
+    - name: limit
+      description: Maximum number of results (non-negative integer).
+      type: textArea
+    - name: offset
+      description: Results offset for pagination (non-negative integer).
+      type: textArea
+    - name: filter
+      description: 'JSON object for filter parameters (e.g., {"created_at": "≥2024-01-01T00:00:00Z"}).'
+      type: textArea
+    - name: flag
+      description: JSON object for flag parameters.
+      type: textArea
+    outputs:
+    - contextPath: expel.alerts
+      description: List of Expel alerts matching criteria
+      type: string
+    description: Retreives a list of alerts matching the specified criteria.
+    examples:
+    - description: List recent high-severity alerts.
+      arguments:
+        filter: '{"expel_severity": "HIGH"}'
+        limit: "5"
+  - name: expel-get-alert-details
+    arguments:
+    - name: alertID
+      required: true
+      description: Expel alert id.
+      type: unknown
+    - name: include
+      description: Comma-separated related resources to include.
+      type: textArea
+    - name: filter
+      description: JSON object for filter parameters.
+      type: textArea
+    - name: alert_relation
+      auto: PREDEFINED
+      predefined:
+      - analyst_activity_timeline
+      - vendor
+      - investigation
+      - organization
+      - assigned_to_actor
+      - similar_alerts
+      - status_last_updated_by
+      - hunting_investigation
+      - hunting_investigation_finding
+      - created_by
+      - updated_by
+      - close_comment_updated_by
+      - context_labels
+      - evidence
+      - expel_alert_histories
+      - expel_alert_view_histories
+      - expel_alert_assignable_expel_user_view_histories
+      - expel_alert_rapid_triage_priority_histories
+      - suppression_histories
+      - source_ip_addresses
+      - destination_ip_addresses
+      - suggestions
+      - vendor_alerts
+      - related_investigations
+      - investigative_actions
+      - investigative_action_histories
+      - related_investigations_via_involved_host_ips
+      - originated_context_labels
+      - phishing_submissions
+      - user_tasks
+      description: Relation category of the alert.
+    outputs:
+    - contextPath: Expel.Alerts.Details
+      description: Details of the specified alert.
+      type: string
+    description: Fetches details for a specific alert.
+    examples:
+    - description: Fetch alert details with related evidence.
+      arguments:
+        alertID: "98765"
+        alert_relation: evidence
+  - name: expel-post-context-upload
+    arguments:
+    - name: contextData
+      required: true
+      description: Context Data to upload in JSON format.
+      type: keyValue
+    outputs:
+    - contextPath: Expel.Context.Upload
+      description: Uploaded context variable details.
+      type: string
+    description: Posts context data to Expel workbench.
+    examples:
+    - description: Upload a context variable.
+      arguments:
+        contextData: '{"name": "indicator", "value": "1.2.3.4"}'
+  - name: expel-context-update
+    arguments:
+    - name: context_id
+      required: true
+      description: Context variable ID to update.
+      type: textArea
+    - name: contextUpdate
+      description: JSON body for context update. If provided, it takes precedence over individual fields.
+      type: textArea
+    - name: name
+      description: Context variable name.
+      type: textArea
+    - name: description
+      description: Context variable description.
+      type: textArea
+    - name: surface_context
+      description: Whether to surface context.
+      type: boolean
+    - name: value
+      description: Context variable value.
+      type: textArea
+    - name: categories
+      description: JSON array of category IDs/names.
+      type: textArea
+    - name: tags
+      description: JSON array of tags.
+      type: textArea
+    outputs:
+    - contextPath: Expel.Context.Update
+      description: Updated context variable details.
+      type: string
+    description: Updates a context variable and related metadata.
+    examples:
+    - description: Update a context variable value.
+      arguments:
+        context_id: "ctx-123"
+        contextUpdate: '{"value": "new-value"}'
+  - name: expel-context-delete
+    arguments:
+    - name: context_id
+      required: true
+      description: Context variable ID to delete.
+      type: textArea
+    outputs:
+    - contextPath: Expel.Context.Delete
+      description: Delete result.
+      type: string
+    description: Deletes a context variable.
+    examples:
+    - description: Delete a context variable by ID.
+      arguments:
+        context_id: "ctx-123"
+  - name: expel-get-alert-count-by-severity
+    arguments:
+    - name: include
+      description: Comma-separated related resources to include.
+      type: textArea
+    - name: sort
+      description: Sort field (prefix with '-' for descending).
+      type: textArea
+    - name: limit
+      description: Maximum number of results (non-negative integer).
+      type: textArea
+    - name: offset
+      description: Results offset for pagination (non-negative integer).
+      type: textArea
+    - name: filter
+      description: JSON object for filter parameters.
+      type: textArea
+    - name: flag
+      description: JSON object for flag parameters.
+      type: textArea
+    outputs:
+    - contextPath: Expel.Alerts.CountBySeverity
+      description: Alert counts grouped by severity.
+      type: string
+    description: Retrieves alert counts by severity.
+    examples:
+    - description: Get alert count by severity.
+      arguments: {}
+  - name: expel-get-investigation-history
+    arguments:
+    - name: investigationID
+      required: true
+      description: Investigation ID.
+      type: textArea
+    outputs:
+    - contextPath: Expel.Investigation.History
+      description: Investigation history timeline entries.
+      type: string
+    description: Fetches investigation history timeline.
+    examples:
+    - description: Get investigation history timeline.
+      arguments:
+        investigationID: "12345"
+  - name: expel-get-alert-history
+    arguments:
+    - name: alertID
+      required: true
+      description: Alert ID.
+      type: textArea
+    outputs:
+    - contextPath: Expel.Alert.History
+      description: Alert history timeline entries.
+      type: string
+    description: Fetches alert history timeline.
+    examples:
+    - description: Get alert history timeline.
+      arguments:
+        alertID: "98765"
+  - name: expel-search-events
+    arguments:
+    - name: filter
+      description: JSON filter object for event search.
+      type: textArea
+    - name: name
+      description: Event name.
+      type: textArea
+    - name: ip
+      description: IP address.
+      type: textArea
+    - name: hostname
+      description: Hostname.
+      type: textArea
+    - name: username
+      description: Username.
+      type: textArea
+    - name: fileHash
+      description: File hash.
+      type: textArea
+    - name: from
+      description: Start time (ISO 8601).
+      type: textArea
+    - name: to
+      description: End time (ISO 8601).
+      type: textArea
+    - name: phrase
+      description: Search phrase.
+      type: textArea
+    - name: organization_id
+      description: Organization ID.
+      type: textArea
+    - name: vendor_name
+      description: Vendor name.
+      type: textArea
+    outputs:
+    - contextPath: Expel.Events.Search
+      description: Event search results.
+      type: string
+    description: Searches for events using provided filters.
+    examples:
+    - description: Search events by IP and time range.
+      arguments:
+        ip: "1.2.3.4"
+        from: "2024-01-01T00:00:00Z"
+        to: "2024-01-02T00:00:00Z"
+  - name: expel-get-health
+    arguments:
+    - name: auth
+      description: Use auth health endpoint.
+      type: boolean
+    - name: heartbeat
+      description: Use heartbeat endpoint.
+      type: boolean
+    - name: component
+      description: Filter by component.
+      type: textArea
+    outputs:
+    - contextPath: Expel.Health
+      description: Health status.
+      type: string
+    description: Retrieves Workbench API health status.
+    examples:
+    - description: Get auth health status.
+      arguments:
+        auth: "true"
+  - name: expel-get-info
+    arguments: []
+    outputs:
+    - contextPath: Expel.Info
+      description: API info.
+      type: string
+    description: Retrieves Workbench API info.
+    examples:
+    - description: Get API info.
+      arguments: {}
+  - name: expel-link-pagerduty-incident
+    arguments:
+    - name: pagerduty_incident_id
+      description: Existing PagerDuty incident ID to link to the current Expel investigation.
+      type: textArea
+    - name: pagerduty_incident_key
+      description: Existing PagerDuty incident key or dedup key to link to the current Expel investigation.
+      type: textArea
+    outputs:
+    - contextPath: Expel.PagerDutyLink.Linked
+      description: Whether a PagerDuty incident is linked to the current Expel incident.
+      type: boolean
+    - contextPath: Expel.PagerDutyLink.IncidentID
+      description: Linked PagerDuty incident ID.
+      type: string
+    - contextPath: Expel.PagerDutyLink.IncidentKey
+      description: Linked PagerDuty incident dedup key.
+      type: string
+    - contextPath: Expel.PagerDutyLink.Status
+      description: Linked PagerDuty incident status.
+      type: string
+    - contextPath: Expel.PagerDutyLink.HtmlUrl
+      description: Linked PagerDuty incident URL.
+      type: string
+    - contextPath: Expel.PagerDutyLink.ServiceName
+      description: Linked PagerDuty service name.
+      type: string
+    - contextPath: Expel.PagerDutyLink.SearchReason
+      description: How the PagerDuty incident was matched or refreshed.
+      type: string
+    description: >-
+      Links or refreshes an existing PagerDuty incident for the current Expel
+      investigation. If no PagerDuty ID or key is provided, the command searches
+      existing PagerDuty incidents for the Expel investigation ID or short link.
+    examples:
+    - description: Link an existing PagerDuty incident by ID.
+      arguments:
+        pagerduty_incident_id: "PABC123"
+    - description: Link an existing PagerDuty incident by dedup key.
+      arguments:
+        pagerduty_incident_key: "expel-investigation-12345"
+    - description: Automatically search PagerDuty incidents by Expel investigation references.
+      arguments: {}
+  dockerimage: demisto/python3:3.12.8.3296088
+  runonce: false
+  subtype: python3

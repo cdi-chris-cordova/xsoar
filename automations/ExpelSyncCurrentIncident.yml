@@ -1,0 +1,192 @@
+args:
+- description: Expel investigation ID. Defaults to the current incident's Expel investigation field.
+  name: investigation_id
+- auto: PREDEFINED
+  defaultValue: 'false'
+  description: Force a refresh even if the layout trigger control is not currently set.
+  name: force
+  predefined:
+  - 'true'
+  - 'false'
+- description: Expel integration instance to use. Leave empty to use the default enabled instance.
+  name: using
+comment: Synchronize the current XSOAR incident with the latest Expel investigation data on demand.
+commonfields:
+  id: ExpelSyncCurrentIncident
+  version: -1
+enabled: true
+fromversion: 6.10.0
+name: ExpelSyncCurrentIncident
+outputs:
+- contextPath: ExpelSyncCurrentIncident.Updated
+  description: Whether the current incident was updated from Expel.
+  type: Boolean
+- contextPath: ExpelSyncCurrentIncident.InvestigationID
+  description: Expel investigation ID used for the sync.
+  type: String
+- contextPath: ExpelSyncCurrentIncident.SkippedField
+  description: Incident fields that could not be updated on the current XSOAR server.
+  type: String
+- contextPath: ExpelSyncCurrentIncident.Notice
+  description: Additional notice about the on-demand sync action.
+  type: String
+script: |-
+  import traceback
+  from typing import Any, Dict, List, Optional
+
+  import demistomock as demisto
+  from CommonServerPython import *  # noqa: F401
+  from CommonServerUserPython import *  # noqa: F401
+
+  TRIGGER_FIELD = "expelsyncrequested"
+  INVESTIGATION_FIELD = "expelinvestigationid"
+  SYNC_PAYLOAD_COMMAND = "expel-get-incident-sync-data"
+
+
+  def _execute_command(command: str, args: Dict[str, Any]) -> List[Dict[str, Any]]:
+      sanitized_args = {key: value for key, value in args.items() if value not in (None, "", [], {})}
+      results = demisto.executeCommand(command, sanitized_args)
+      if is_error(results):
+          raise DemistoException(f'{command} failed: {get_error(results)}')
+      if isinstance(results, list):
+          return results
+      if isinstance(results, dict):
+          return [results]
+      raise DemistoException(f"{command} returned an unsupported response type.")
+
+
+  def _get_current_incident() -> Dict[str, Any]:
+      incident = demisto.incident() or {}
+      if incident:
+          return incident
+      incidents = demisto.incidents()
+      if isinstance(incidents, list) and incidents:
+          return incidents[0] or {}
+      return {}
+
+
+  def _get_incident_value(field_name: str) -> Optional[str]:
+      incident = _get_current_incident()
+      custom_fields = incident.get("CustomFields") or incident.get("customFields") or {}
+      value = custom_fields.get(field_name)
+      if value in (None, ""):
+          value = incident.get(field_name)
+      if value in (None, ""):
+          return None
+      return str(value)
+
+
+  def _extract_payload(results: List[Dict[str, Any]]) -> Dict[str, Any]:
+      for entry in results:
+          contents = entry.get("Contents")
+          if isinstance(contents, dict):
+              return contents
+      raise DemistoException("Expel sync payload command did not return a payload object.")
+
+
+  def _set_current_incident_fields(payload: Dict[str, Any]) -> List[str]:
+      skipped_fields: List[str] = []
+      system_args = {
+          "name": payload.get("name"),
+          "details": payload.get("details"),
+          "severity": payload.get("severity"),
+      }
+      _execute_command("setIncident", system_args)
+
+      for field_name, field_value in (payload.get("custom_fields") or {}).items():
+          try:
+              _execute_command("setIncident", {field_name: field_value})
+          except DemistoException as exc:
+              skipped_fields.append(field_name)
+              demisto.debug(f'Skipping incident field "{field_name}" during Expel manual sync: {exc}')
+
+      return skipped_fields
+
+
+  def _reset_trigger_field() -> None:
+      try:
+          _execute_command("setIncident", {TRIGGER_FIELD: False})
+      except DemistoException as exc:
+          demisto.debug(f'Failed to reset Expel sync trigger field "{TRIGGER_FIELD}": {exc}')
+
+
+  def sync_current_incident_command(args: Dict[str, Any]) -> Optional[CommandResults]:
+      force = argToBoolean(args.get("force", "false"))
+      trigger_requested = argToBoolean(_get_incident_value(TRIGGER_FIELD) or "false")
+      if not force and not trigger_requested:
+          demisto.debug("Expel on-demand sync skipped because the refresh control is not enabled.")
+          return None
+
+      investigation_id = (
+          args.get("investigation_id")
+          or args.get("investigationID")
+          or _get_incident_value(INVESTIGATION_FIELD)
+      )
+      if not investigation_id:
+          raise DemistoException("No Expel investigation ID is available on the current incident.")
+
+      command_args: Dict[str, Any] = {"investigationID": investigation_id}
+      using_instance = args.get("using")
+      if using_instance:
+          command_args["using"] = using_instance
+
+      payload = _extract_payload(_execute_command(SYNC_PAYLOAD_COMMAND, command_args))
+      skipped_fields = _set_current_incident_fields(payload)
+      _reset_trigger_field()
+
+      output = {
+          "Updated": True,
+          "InvestigationID": payload.get("InvestigationID") or investigation_id,
+          "SkippedField": skipped_fields,
+      }
+      notice = ""
+      if skipped_fields:
+          notice = (
+              "Some Expel fields could not be updated on this XSOAR server: "
+              + ", ".join(skipped_fields)
+              + "."
+          )
+          output["Notice"] = notice
+
+      human_readable = tableToMarkdown(
+          "Expel Manual Sync",
+          [{
+              "Updated": "Yes",
+              "InvestigationID": output["InvestigationID"],
+              "SkippedFieldCount": len(skipped_fields),
+          }],
+          removeNull=True,
+      )
+      if notice:
+          human_readable = f"{human_readable}\n\n{notice}"
+
+      return CommandResults(
+          outputs_prefix="ExpelSyncCurrentIncident",
+          outputs_key_field="InvestigationID",
+          outputs=output,
+          readable_output=human_readable,
+          raw_response=payload,
+      )
+
+
+  def main() -> None:
+      try:
+          result = sync_current_incident_command(demisto.args())
+          if result is None:
+              return
+          return_results(result)
+      except Exception as exc:
+          demisto.error(traceback.format_exc())
+          return_error(f"Failed to execute ExpelSyncCurrentIncident. Error: {exc}")
+
+
+  if __name__ in ("__main__", "__builtin__", "builtins"):
+      main()
+tags:
+- expel
+- incident-management
+type: python
+subtype: python3
+dockerimage: demisto/python3:3.12.8.3296088
+tests:
+- No tests (auto formatted)

@@ -1,0 +1,643 @@
+{
+  "id": "2f4b83de-fc1b-48e2-a4cc-5ad324a883cd",
+  "version": 23,
+  "cacheVersn": 0,
+  "modified": "2022-09-06T18:04:00.782958013Z",
+  "created": "0001-01-01T00:00:00Z",
+  "sizeInBytes": 0,
+  "packID": "",
+  "packName": "",
+  "itemVersion": "",
+  "fromServerVersion": "",
+  "toServerVersion": "",
+  "propagationLabels": [
+    "all"
+  ],
+  "definitionId": "",
+  "vcShouldIgnore": false,
+  "vcShouldKeepItemLegacyProdMachine": false,
+  "commitMessage": "",
+  "shouldCommit": false,
+  "name": "Expel Investigation Analyst Layout",
+  "description": "Analyst-focused layout for Expel investigations",
+  "prevName": "",
+  "system": false,
+  "locked": false,
+  "group": "incident",
+  "detached": false,
+  "detailsV2": {
+    "TypeName": "Expel Investigation",
+    "tabs": [
+      {
+        "hidden": false,
+        "id": "2b24e461-5435-4b14-bb5b-4f3339bb002c",
+        "name": "Summary",
+        "sections": [
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 2,
+            "hideName": false,
+            "i": "summary-actions-section-refresh",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelsyncrequested",
+                "height": 22,
+                "id": "96f4ab53-b260-4e80-bdfd-5b0d39f7fd2e",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "Actions",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 4,
+            "hideName": false,
+            "i": "summary-investigation-section-0",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelinvestigationid",
+                "height": 22,
+                "id": "c888d46d-87fe-4b53-94b3-7745d9ee0bad",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelshortlink",
+                "height": 22,
+                "id": "d23ac3bd-033f-4dc8-aeb6-cc76565ad883",
+                "index": 1,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelworkbenchurl",
+                "height": 22,
+                "id": "51bf83c4-1f2f-42e1-a7d6-72f251fd6ff3",
+                "index": 2,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expeldecision",
+                "height": 22,
+                "id": "0768b19c-f3ce-42af-ab5f-558c585acbdb",
+                "index": 3,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelanalystseverity",
+                "height": 22,
+                "id": "b7153a89-5db7-4e08-9827-73fdc5316078",
+                "index": 4,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "Investigation Summary",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 4,
+            "hideName": false,
+            "i": "summary-status-section-1",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelcreatedat",
+                "height": 22,
+                "id": "b0c04d54-2281-4e75-b830-6f9945e095ad",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelupdatedat",
+                "height": 22,
+                "id": "b18ea3e9-5d8c-4bad-a1df-20f3df461407",
+                "index": 1,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelstatusupdatedat",
+                "height": 22,
+                "id": "d86d2849-c3fe-4f66-a965-5de4ae15bb15",
+                "index": 2,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelisincidentstatusupdatedat",
+                "height": 22,
+                "id": "f0d6bebc-deb7-4fef-b4fc-d425d7490d4c",
+                "index": 3,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expeldeletedat",
+                "height": 22,
+                "id": "1509407d-5b36-47e7-95c3-16c4e3236251",
+                "index": 4,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "Status Timeline",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      },
+      {
+        "hidden": false,
+        "id": "c322a36e-d8be-4b8b-99c0-701fb1ddc158",
+        "name": "Narrative",
+        "sections": [
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 4,
+            "hideName": false,
+            "i": "narrative-investigation-section-2",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelleaddescription",
+                "height": 22,
+                "id": "5a8aada7-d85a-4824-b2f0-223dd3d76f7f",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelopensummary",
+                "height": 22,
+                "id": "6d573c5d-9e7f-448c-82c2-a1908a22b3be",
+                "index": 1,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelopenreason",
+                "height": 22,
+                "id": "e03fe5ea-4247-44d0-909d-75c76c7f9953",
+                "index": 2,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "Investigation Narrative",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 4,
+            "hideName": false,
+            "i": "narrative-guidance-section-3",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelnextstepscf",
+                "height": 22,
+                "id": "6ad0c11d-67c9-4ea8-b0f4-a0e33df879af",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelcriticalcomment",
+                "height": 22,
+                "id": "057504b1-9190-4b1b-b217-d2154fe5a1ee",
+                "index": 1,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelclosecomment",
+                "height": 22,
+                "id": "fe52ca86-d3b0-42d3-929b-4628dfbdd323",
+                "index": 2,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "Analyst Guidance",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      },
+      {
+        "hidden": false,
+        "id": "6ca543cf-70f3-423c-a0aa-11ba026c2287",
+        "name": "Detection",
+        "sections": [
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 4,
+            "hideName": false,
+            "i": "detection-threat-section-4",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelthreattype",
+                "height": 22,
+                "id": "ac3ada50-44ef-427e-8c36-26f88d741a7a",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expeldetectiontype",
+                "height": 22,
+                "id": "1fb437b0-21e0-4469-9557-d8a4306213ba",
+                "index": 1,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelsourcereason",
+                "height": 22,
+                "id": "68624478-b375-4c0b-8bd7-a28e9f686157",
+                "index": 2,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expeldefaultpluginslug",
+                "height": 22,
+                "id": "ed64e197-d920-4997-88e3-92448ad2ae75",
+                "index": 3,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "Threat and Detection",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 4,
+            "hideName": false,
+            "i": "detection-attack-section-5",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelattackvector",
+                "height": 22,
+                "id": "522053ea-56ae-42ee-9534-3ed2fb188d5f",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelinitialattackvector",
+                "height": 22,
+                "id": "1e7906c7-839b-476a-8266-9586d95a079d",
+                "index": 1,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelattacktiming",
+                "height": 22,
+                "id": "afba0e91-dc2a-4314-be15-2836cc209563",
+                "index": 2,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelattacklifecycle",
+                "height": 22,
+                "id": "3ef1b5ac-76ab-4143-8330-1db3b042fcde",
+                "index": 3,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelmalwarefamilycf",
+                "height": 22,
+                "id": "6f48d54d-5d98-4871-9a3c-c1336901e8ee",
+                "index": 4,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "Attack Context",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      },
+      {
+        "hidden": false,
+        "id": "383ff851-0298-405c-b002-f7712655483d",
+        "name": "Response",
+        "sections": [
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 4,
+            "hideName": false,
+            "i": "response-remediations-section-6",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelremediationcount",
+                "height": 22,
+                "id": "d8d6f9b5-8e6b-4ee4-8505-9be4496e9e03",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelopenremediationcount",
+                "height": 22,
+                "id": "6bdfd14f-b422-4154-b2ca-b302ff6f9f30",
+                "index": 1,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelclosedremediationcount",
+                "height": 22,
+                "id": "f894451a-5d5d-4efb-8501-e7de2d5203a6",
+                "index": 2,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelremediationchecklist",
+                "height": 22,
+                "id": "6be54c58-f67f-4bdc-98f3-a8d6df03fb5d",
+                "index": 3,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelremediationactions",
+                "height": 22,
+                "id": "fd0ad390-6747-4206-9e57-692390864a44",
+                "index": 4,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "Remediations",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 4,
+            "hideName": false,
+            "i": "response-pagerduty-section-6",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_pagerdutyincidentid",
+                "height": 22,
+                "id": "6ca6e11d-74f4-4141-a850-6435e7fba901",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_pagerdutydedupkey",
+                "height": 22,
+                "id": "b563a0c0-f0c5-4d4c-96bb-6bc2d94b3d98",
+                "index": 1,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_pagerdutyincidenturl",
+                "height": 22,
+                "id": "c31188cc-44b7-4fd8-bef9-71174aaea482",
+                "index": 2,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_pagerdutystatus",
+                "height": 22,
+                "id": "a25bfcc8-c4f3-47c8-9f15-c2a9a1845373",
+                "index": 3,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_pagerdutyservicename",
+                "height": 22,
+                "id": "43053439-80c7-4d7d-8a72-29f35b6cf655",
+                "index": 4,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "PagerDuty Linkage",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 4,
+            "hideName": false,
+            "i": "response-ownership-section-7",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelorgid",
+                "height": 22,
+                "id": "5ca5d2d3-acb9-41df-b89b-727ea5d4aaba",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelassignedactorid",
+                "height": 22,
+                "id": "e1c44fef-7253-47b5-8e3b-239f5ea04a4e",
+                "index": 1,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "Ownership",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      },
+      {
+        "hidden": false,
+        "id": "f6eef0ca-ac18-4170-aca1-271893646238",
+        "name": "Audit",
+        "sections": [
+          {
+            "description": "",
+            "displayType": "ROW",
+            "h": 4,
+            "hideName": false,
+            "i": "audit-actors-section-8",
+            "items": [
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelcreatedbyactorid",
+                "height": 22,
+                "id": "a408e2aa-2052-48ff-b390-30ec7fa2af19",
+                "index": 0,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelupdatedbyactorid",
+                "height": 22,
+                "id": "11429480-beb9-449b-984e-a82ce0941350",
+                "index": 1,
+                "sectionItemType": "field",
+                "startCol": 0
+              },
+              {
+                "endCol": 2,
+                "fieldId": "incident_expelleaddescupdatedbyactorid",
+                "height": 22,
+                "id": "b9fcc816-a9ef-4899-a4e2-cdda17b871c6",
+                "index": 2,
+                "sectionItemType": "field",
+                "startCol": 0
+              }
+            ],
+            "maxH": null,
+            "maxW": 3,
+            "minH": 1,
+            "moved": false,
+            "name": "Record Actors",
+            "static": false,
+            "w": 1,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      }
+    ]
+  },
+  "edit": null,
+  "details": null,
+  "close": null,
+  "quickView": null,
+  "quickViewV2": null,
+  "mobile": null,
+  "indicatorsDetails": null,
+  "indicatorsQuickView": null
+}

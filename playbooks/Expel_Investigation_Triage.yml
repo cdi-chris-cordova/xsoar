@@ -1,0 +1,141 @@
+id: f6c94b01-111a-4f3b-aeb1-06d7a50d05e8
+version: -1
+fromversion: 6.10.0
+name: Expel Investigation Triage
+description: >-
+  Enriches an Expel incident with the latest investigation details and history
+  timeline so analysts can review the current decision, close comment, and next
+  steps from one playbook run.
+starttaskid: "1"
+tasks:
+  "1":
+    id: "1"
+    task:
+      id: "1"
+      version: -1
+      name: Start
+      type: start
+      iscommand: false
+    nexttasks:
+      '#none#':
+      - "2"
+  "2":
+    id: "2"
+    task:
+      id: "2"
+      version: -1
+      name: Synchronize current incident from Expel
+      description: >-
+        Refresh the current XSOAR incident from the latest Expel investigation
+        record, including remediation checklist and remediation counts, before
+        analyst review.
+      type: regular
+      iscommand: true
+      command:
+      - ExpelSyncCurrentIncident
+      scriptarguments:
+        force:
+          simple: "true"
+        investigation_id:
+          simple: ${incident.customFields.expelinvestigationid}
+    nexttasks:
+      '#none#':
+      - "3"
+  "3":
+    id: "3"
+    task:
+      id: "3"
+      version: -1
+      name: Get Expel investigation history
+      description: Retrieve the Expel timeline for additional context.
+      type: regular
+      iscommand: true
+      command:
+      - expel-get-investigation-history
+      scriptarguments:
+        investigationID:
+          simple: ${incident.customFields.expelinvestigationid}
+    nexttasks:
+      '#none#':
+      - "7"
+  "7":
+    id: "7"
+    task:
+      id: "7"
+      version: -1
+      name: Synchronize PagerDuty linkage
+      description: >-
+        Link an existing PagerDuty incident or refresh a previously linked one
+        for this Expel investigation. If no PagerDuty ID or key is provided, the
+        playbook searches existing PagerDuty incidents for the Expel
+        investigation ID or short link and links the best match automatically.
+      type: regular
+      iscommand: true
+      command:
+      - expel-link-pagerduty-incident
+      scriptarguments:
+        pagerduty_incident_id:
+          simple: ${inputs.pagerduty_incident_id}
+        pagerduty_incident_key:
+          simple: ${inputs.pagerduty_incident_key}
+    nexttasks:
+      '#none#':
+      - "4"
+  "4":
+    id: "4"
+    task:
+      id: "4"
+      version: -1
+      name: Check whether the Expel investigation is still open
+      description: Decide whether this incident needs analyst review.
+      type: condition
+      iscommand: false
+      conditions:
+      - label: Open
+        condition:
+        - - left:
+              value:
+                simple: ${incident.customFields.expeldecision}
+            operator: isEmpty
+      - label: Closed
+        condition:
+        - - left:
+              value:
+                simple: ${incident.customFields.expeldecision}
+            operator: isNotEmpty
+    nexttasks:
+      Open:
+      - "5"
+      Closed:
+      - "6"
+  "5":
+    id: "5"
+    task:
+      id: "5"
+      version: -1
+      name: Analyst review required
+      description: >-
+        Review the Expel investigation in Workbench, confirm the evidence, and
+        update the XSOAR incident notes or status as needed.
+      type: regular
+      iscommand: false
+  "6":
+    id: "6"
+    task:
+      id: "6"
+      version: -1
+      name: Expel investigation already closed
+      description: No analyst review is required because Expel has already set a decision.
+      type: regular
+      iscommand: false
+inputs:
+- key: pagerduty_incident_id
+  value: {}
+  required: false
+  description: Existing PagerDuty incident ID to link to the current Expel investigation.
+- key: pagerduty_incident_key
+  value: {}
+  required: false
+  description: Existing PagerDuty incident key or dedup key to link to the current Expel investigation.
+outputs: []
+quietmode: false

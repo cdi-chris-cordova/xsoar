@@ -1,0 +1,131 @@
+{
+  "brands": null,
+  "cacheVersn": 0,
+  "defaultIncidentType": "Expel Investigation",
+  "definitionId": "",
+  "description": "Maps Expel investigation fields from fetch to XSOAR incident fields, including integration-normalized fields added to the fetched raw event.",
+  "feed": false,
+  "fromServerVersion": "6.0.0",
+  "id": "822a3c38-a4c3-4327-b2f8-310b8ad29259",
+  "incidentSamples": [],
+  "indicatorSamples": [],
+  "instanceIds": null,
+  "itemVersion": "1.1.17",
+  "keyTypeMap": {},
+  "locked": false,
+  "logicalVersion": 24,
+  "mapping": {
+    "Expel Investigation": {
+      "dontMapEventToLabels": false,
+      "internalMapping": {
+        "Expel Investigation ID": {
+          "simple": "id"
+        },
+        "Expel Short Link": {
+          "simple": "attributes.short_link"
+        },
+        "Expel Workbench URL": {
+          "simple": "workbench_url"
+        },
+        "Created At": {
+          "simple": "attributes.created_at"
+        },
+        "Updated At": {
+          "simple": "attributes.updated_at"
+        },
+        "Status Updated At": {
+          "simple": "attributes.status_updated_at"
+        },
+        "Is Incident Status Updated At": {
+          "simple": "attributes.is_incident_status_updated_at"
+        },
+        "Deleted At": {
+          "simple": "attributes.deleted_at"
+        },
+        "Analyst Severity": {
+          "simple": "attributes.analyst_severity"
+        },
+        "Threat Type": {
+          "simple": "attributes.threat_type"
+        },
+        "Attack Vector": {
+          "simple": "attributes.attack_vector"
+        },
+        "Detection Type": {
+          "simple": "attributes.detection_type"
+        },
+        "Attack Timing": {
+          "simple": "attributes.attack_timing"
+        },
+        "Attack Lifecycle": {
+          "simple": "attributes.attack_lifecycle"
+        },
+        "Expel Malware Family": {
+          "simple": "attributes.malware_family"
+        },
+        "Initial Attack Vector": {
+          "simple": "attributes.initial_attack_vector"
+        },
+        "Lead Description": {
+          "simple": "attributes.lead_description"
+        },
+        "Decision": {
+          "simple": "attributes.decision"
+        },
+        "Close Comment": {
+          "simple": "attributes.close_comment"
+        },
+        "Critical Comment": {
+          "simple": "attributes.critical_comment"
+        },
+        "Open Summary": {
+          "simple": "attributes.open_summary"
+        },
+        "Open Reason": {
+          "simple": "attributes.open_reason"
+        },
+        "Expel Next Steps": {
+          "simple": "attributes.next_steps"
+        },
+        "Source Reason": {
+          "simple": "attributes.source_reason"
+        },
+        "Default Plugin Slug": {
+          "simple": "attributes.default_plugin_slug"
+        },
+        "Organization ID": {
+          "simple": "relationships.organization.data.id"
+        },
+        "Assigned To Actor ID": {
+          "simple": "relationships.assigned_to_actor.data.id"
+        },
+        "Created By Actor ID": {
+          "simple": "relationships.created_by.data.id"
+        },
+        "Updated By Actor ID": {
+          "simple": "relationships.updated_by.data.id"
+        },
+        "Lead Description Updated By Actor ID": {
+          "simple": "relationships.lead_description_updated_by.data.id"
+        },
+        "Remediation Actions": {
+          "simple": "remediation_actions.actions"
+        }
+      }
+    }
+  },
+  "name": "Expel Investigation Mapper",
+  "nameRaw": "Expel Investigation Mapper",
+  "packID": "",
+  "packName": "",
+  "propagationLabels": [
+    "all"
+  ],
+  "sourceClassifierId": "",
+  "system": false,
+  "toServerVersion": "",
+  "transformer": {},
+  "type": "mapping-incoming",
+  "unclassifiedCases": {},
+  "version": -1
+}

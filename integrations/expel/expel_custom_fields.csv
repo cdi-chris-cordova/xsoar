@@ -1,0 +1,47 @@
+name,field_type,field_id,description
+Expel Investigation ID,shortText,expel_investigation_id,Expel investigation UUID
+Expel Short Link,shortText,expel_short_link,Expel short link (e.g., CHURCHI-595503)
+Expel Workbench URL,url,expel_workbench_url,Direct link to Expel Workbench investigation
+Created At,date,expel_created_at,Investigation created time (Expel)
+Updated At,date,expel_updated_at,Investigation updated time (Expel)
+Status Updated At,date,expel_status_updated_at,Status updated time (Expel)
+Is Incident,boolean,expel_is_incident,Whether investigation is an incident
+Is Incident Status Updated At,date,expel_is_incident_status_updated_at,When incident status last updated
+Is Surge,boolean,expel_is_surge,Whether investigation is marked as surge
+Is Downgrade,boolean,expel_is_downgrade,Whether investigation is a downgrade
+Deleted At,date,expel_deleted_at,Deleted timestamp
+Analyst Severity,shortText,expel_analyst_severity,Analyst severity
+Threat Type,shortText,expel_threat_type,Threat type
+Attack Vector,shortText,expel_attack_vector,Attack vector
+Detection Type,shortText,expel_detection_type,Detection type
+Attack Timing,shortText,expel_attack_timing,Attack timing
+Attack Lifecycle,shortText,expel_attack_lifecycle,Attack lifecycle
+Malware Family,shortText,expel_malware_family,Malware family
+Initial Attack Vector,shortText,expel_initial_attack_vector,Initial attack vector
+Lead Description,longText,expel_lead_description,Lead description
+Decision,shortText,expel_decision,Decision
+Close Comment,longText,expel_close_comment,Close comment
+Critical Comment,longText,expel_critical_comment,Critical comment
+Open Summary,longText,expel_open_summary,Open summary
+Open Reason,longText,expel_open_reason,Open reason
+Next Steps,longText,expel_next_steps,Next steps
+Source Reason,shortText,expel_source_reason,Source reason
+Has Hunting Status,boolean,expel_has_hunting_status,Whether hunting status exists
+Is SOC Support Required,boolean,expel_is_soc_support_required,Whether SOC support is required
+Default Plugin Slug,shortText,expel_default_plugin_slug,Default plugin slug
+Organization ID,shortText,expel_org_id,Organization ID
+Assigned To Actor ID,shortText,expel_assigned_actor_id,Assigned actor ID
+Created By Actor ID,shortText,expel_created_by_actor_id,Created by actor ID
+Updated By Actor ID,shortText,expel_updated_by_actor_id,Updated by actor ID
+Lead Description Updated By Actor ID,shortText,expel_lead_desc_updated_by_actor_id,Lead description updated by actor ID
+Remediation Actions,longText,expel_remediation_actions,Remediation actions related to the investigation
+Expel Remediation Checklist,longText,expel_remediation_checklist,Checklist-style view of Expel remediations and their current statuses
+Remediation Count,shortText,expel_remediation_count,Total remediation actions synced from Expel
+Open Remediation Count,shortText,expel_open_remediation_count,Number of open remediation actions synced from Expel
+Closed Remediation Count,shortText,expel_closed_remediation_count,Number of completed remediation actions synced from Expel
+Refresh Expel Investigation,boolean,expel_sync_requested,Toggle to run the on-demand Expel sync automation from the incident layout; the automation resets this field after it runs
+PagerDuty Incident ID,shortText,pagerduty_incident_id,Linked PagerDuty incident ID
+PagerDuty Dedup Key,shortText,pagerduty_dedup_key,PagerDuty dedup key used to correlate the Expel investigation
+PagerDuty Incident URL,url,pagerduty_incident_url,Direct link to the linked PagerDuty incident
+PagerDuty Status,shortText,pagerduty_status,Current linked PagerDuty incident status
+PagerDuty Service Name,shortText,pagerduty_service_name,PagerDuty service name associated with the linked incident
